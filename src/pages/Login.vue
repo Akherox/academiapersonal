@@ -2,7 +2,9 @@
   <q-page padding>
     <q-btn color="green" label="⇦" to="/" class="q-my-sm"/>
   <q-form class="q-pa-md q-gutter-md" style="max-width: 500px">
-
+    <div class="flex justify-center">
+    <q-img class="q-mb-xl" style="max-width: 150px" src="~/assets/Logo.png"/>
+    </div>
     <q-input standout v-model="text" label="Usuário" :dense="dense" style="color: white" />
     <q-input v-model="password" filled :type="isPwd ? 'password' : 'text'" hint="Insira sua Senha" style="color: white">
         <template v-slot:append>
