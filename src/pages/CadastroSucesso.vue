@@ -2,7 +2,11 @@
   <q-page padding>
     <q-btn color="green" label="⇦" to="/" class="q-my-sm"/>
     <div class="q-pa-md q-gutter-md text-center">
-      <q-icon name="task_alt" style="font-size: 13rem; color:#11F500" />
+      <h3> </h3>
+    <div class="flex justify-center">
+    <q-img class="q-mb-xl" style="max-width: 180px" src="~/assets/Logo.png"/>
+    </div>
+      <q-icon name="task_alt" style="font-size: 11rem; color:#11F500" /> 
     
     <p class="q-pa-md" style="color:white">
      Cadastro realizado com sucesso

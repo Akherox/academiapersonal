@@ -5,8 +5,8 @@
     <q-btn color="green" label="Cadastro" to="/cadastro" class="q-my-md"/>
     <q-btn color="green" label="CadastroSucesso" to="/cadastrosucesso" class="q-my-md"/>
     <q-btn color="green" label="CriarPerfil" to="/criarperfil" class="q-my-md"/>
-    <q-btn color="black" label="Calculadora" to="/calculadora" class="q-my-md"/>
-    <q-btn color="black" label="Exemplo" to="/exemplo" class="q-my-md"/>
+    <q-btn color="green" label="RecSenha1" to="/mailrecuperarsenha" class="q-my-md"/>
+    <q-btn color="green" label="RecSenha2" to="/codigorecuperarsenha" class="q-my-md"/>
     <q-btn color="black" label="IMC-Professor" to="/imcprofessor" class="q-my-md"/>
     <q-btn color="black" label="Lista" to="/lista" class="q-my-md"/>
     <q-btn color="black" label="Lista-Cadastro" to="/listacadastro" class="q-my-md"/>

@@ -9,7 +9,9 @@ const routes = [
       { path: '/cadastro', component: () => import('pages/Cadastro.vue')},
       { path: '/cadastrosucesso', component: () => import('pages/CadastroSucesso')},
       { path: '/criarperfil', component: () => import('pages/CriarPerfil')},
-      { path: '/listaexercicios', component: () => import('pages/ListaExercicios')} 
+      { path: '/listaexercicios', component: () => import('pages/ListaExercicios')},
+      { path: '/mailrecuperarsenha', component:	() => import('pages/MailRecSenha')},
+      { path: '/codigorecuperarsenha', component: () => import('pages/CodRecSenha')} 
     ]
   },
 
