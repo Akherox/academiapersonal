@@ -11,6 +11,7 @@
     <q-btn color="black" label="Lista" to="/lista" class="q-my-md"/>
     <q-btn color="black" label="Lista-Cadastro" to="/listacadastro" class="q-my-md"/>
     <q-btn color="black" label="ListaMercado" to="/listamercado" class="q-my-md"/>
+    <q-btn color="green" label="PerfilUsuario" to="/perfilusuario" class="q-my-md"/>
     <q-btn color="green" label="ListaExercicios" to="/listaexercicios" class="q-my-md"/>
   </q-page>
 </template>

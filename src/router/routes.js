@@ -12,7 +12,8 @@ const routes = [
       { path: '/listaexercicios', component: () => import('pages/ListaExercicios')},
       { path: '/mailrecuperarsenha', component:	() => import('pages/MailRecSenha')},
       { path: '/codigorecuperarsenha', component: () => import('pages/CodRecSenha')},
-      { path: '/novasenha', component: () => import('pages/NovaSenha')} 
+      { path: '/novasenha', component: () => import('pages/NovaSenha')},
+      { path: '/perfilusuario', component: () => import('pages/PerfilUsuario')} 
     ]
   },
 
