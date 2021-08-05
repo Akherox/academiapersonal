@@ -1,14 +1,14 @@
 <template>
   <q-layout class="fundo" view="lHh Lpr lFf">
-    <q-header elevated>
+    <!-- <q-header elevated>
       <q-toolbar>
         <q-toolbar-title> Academia Personal </q-toolbar-title>
         <div>By ALEX.008</div>
       </q-toolbar>
-    </q-header>
+    </q-header> -->
     <q-page-container>
       <router-view />
-    </q-page-container>
+    </q-page-container> 
   </q-layout>
 </template>
 
