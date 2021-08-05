@@ -2,7 +2,7 @@
   <q-page padding>
     <q-btn color="green" label="⇦" to="/" class="q-my-sm"/>
     <div class="q-pa-md q-gutter-md text-center">
-      <q-icon name="account_circle" style="font-size: 10rem; color:#11F500" />
+      <q-icon name="account_circle" style="font-size: 10rem; color:#11F500" /> 
     </div>
     <div class="q-pa-md q-gutter-md text-center" style="color:white">
     Foto perfil

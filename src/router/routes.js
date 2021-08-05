@@ -11,7 +11,8 @@ const routes = [
       { path: '/criarperfil', component: () => import('pages/CriarPerfil')},
       { path: '/listaexercicios', component: () => import('pages/ListaExercicios')},
       { path: '/mailrecuperarsenha', component:	() => import('pages/MailRecSenha')},
-      { path: '/codigorecuperarsenha', component: () => import('pages/CodRecSenha')} 
+      { path: '/codigorecuperarsenha', component: () => import('pages/CodRecSenha')},
+      { path: '/novasenha', component: () => import('pages/NovaSenha')} 
     ]
   },
 

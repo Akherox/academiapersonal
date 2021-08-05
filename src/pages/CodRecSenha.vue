@@ -26,8 +26,12 @@
       <div class="q-pa-md q-gutter-md text-center" style="font-size: 0.9rem; color: #11f500">
       <h8>exemplonatela@gmail.com</h8>
       </div>
-    <q-form class="q-pa-md q-gutter-md">
-      
+
+    <q-form class="q-pa-sm q-gutter-md">
+      <q-icon name="check_box_outline_blank" style="font-size: 5rem; color:#11F500" />
+      <q-icon name="check_box_outline_blank" style="font-size: 5rem; color:#11F500" />
+      <q-icon name="check_box_outline_blank" style="font-size: 5rem; color:#11F500" />
+      <q-icon name="check_box_outline_blank" style="font-size: 5rem; color:#11F500" />
       <div class="row">
         <q-btn
           class="col-12"
