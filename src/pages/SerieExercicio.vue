@@ -1,13 +1,13 @@
 <template>
   <q-page padding>
-    <q-header>
+        <q-header>
           <q-toolbar>
         <q-btn flat round dense icon="arrow_back_ios_new" to="/home" />
         <q-toolbar-title></q-toolbar-title>
         <q-btn flat round dense icon="fas fa-user-circle" to="/perfilusuario" />
       </q-toolbar>
         </q-header>
-        <h3>Perfil</h3>
+        <h3>Serie</h3>
         <q-footer>
       <q-tabs>
         <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios" />

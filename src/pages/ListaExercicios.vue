@@ -1,6 +1,12 @@
 <template>
   <q-page padding>
-    <q-btn color="green" label="⇦" to="/" class="q-my-sm"/>
+    <q-header>
+          <q-toolbar>
+        <q-btn flat round dense icon="arrow_back_ios_new" to="/home" />
+        <q-toolbar-title></q-toolbar-title>
+        <q-btn flat round dense icon="fas fa-user-circle" to="/perfilusuario" />
+      </q-toolbar>
+        </q-header>
     <h3>Exercicios</h3>
     <q-list bordered separator>
       <q-item v-for="exercicio in exercicios" :key="exercicio">
@@ -14,6 +20,13 @@
         </q-item-section>
       </q-item>
     </q-list>
+            <q-footer>
+      <q-tabs>
+        <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios" />
+        <q-route-tab icon="home" label="Home" to="/home" />
+        <q-route-tab icon="fitness_center" label="Serie" to="/serieexercicio" />
+      </q-tabs>
+    </q-footer>
   </q-page>
 </template>
 

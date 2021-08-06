@@ -7,7 +7,7 @@
         <q-btn flat round dense icon="fas fa-user-circle" to="/perfilusuario" />
       </q-toolbar>
         </q-header>
-        <h3>Perfil</h3>
+        <h3>Home</h3>
         <q-footer>
       <q-tabs>
         <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios" />
