@@ -26,7 +26,7 @@
           <q-checkbox v-model="right" label="Mater-me logado" style="color:white"/>
         </div>
           <div class="row">
-          <q-btn class="col-12" label="Confirmar" style="background: #11F500; color: black" />
+          <q-btn class="col-12" label="Confirmar" style="background: #11F500; color: black" to="/cadastrosucesso" />
     </div>
   </q-form>
   </q-page>

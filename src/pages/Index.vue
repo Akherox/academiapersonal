@@ -1,7 +1,7 @@
 <template>
   <q-page class="flex flex-center column items-stretch" padding>
     <h2>Avance do Projeto</h2>
-    <q-btn color="green" label="Login" to="/login" class="q-my-md"/>
+    <q-btn color="primary" label="Login" to="/login" class="q-my-md"/>
     <q-btn color="green" label="Cadastro" to="/cadastro" class="q-my-md"/>
     <q-btn color="green" label="CadastroSucesso" to="/cadastrosucesso" class="q-my-md"/>
     <q-btn color="green" label="CriarPerfil" to="/criarperfil" class="q-my-md"/>

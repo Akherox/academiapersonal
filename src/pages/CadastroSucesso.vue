@@ -14,7 +14,7 @@
     </div>
     <div class=q-pa-md>
       <div class="row">
-      <q-btn class="col-12" label="Criar Perfil" style="background: #11F500; color: black" />
+      <q-btn class="col-12" label="Criar Perfil" style="background: #11F500; color: black" to="/criarperfil" />
     </div>
     </div>
   </q-page>

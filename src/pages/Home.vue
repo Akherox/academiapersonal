@@ -1,5 +1,6 @@
 <template>
   <q-page padding>
+    <q-btn color="green" label="⇦" to="/" class="q-my-sm"/>
     <q-header >
           <q-toolbar >
         <q-btn flat round dense icon="arrow_back_ios_new" to="/home" />

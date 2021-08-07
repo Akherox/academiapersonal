@@ -19,7 +19,7 @@
             <q-input class="col" dark v-model="time" filled type="time" label="Tempo disponivel" stack-label />
             <q-input class="col" dark v-model="text" label="Frase inspiradora e motivacional" filled type="textarea" />
             <div class="row">
-            <q-btn class="col-12" label="Prosseguir" style="background: #11F500; color: black" />
+            <q-btn class="col-12" label="Prosseguir" style="background: #11F500; color: black" to="/login" />
           </div>
           </q-form>
     
