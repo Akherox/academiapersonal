@@ -19,10 +19,10 @@
       <div class="q-gutter-sm" style="font-size: 3rem; color: #11f500">
         <h5>Esqueci minha senha</h5>
       </div>
-      </div>
-      <div class="q-pa-md q-gutter-md">
+    </div>
+    <div class="q-pa-md q-gutter-md">
       <h8>Enviaremos um PIN para seu e-mail, troque sua senha.</h8>
-      </div>
+    </div>
     <q-form class="q-pa-md q-gutter-md">
       <q-input filled v-model="text" label="E-mail" />
       <q-input filled v-model="text" label="Confirmar e-mail" />
@@ -38,13 +38,13 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref } from "vue";
 
 export default {
-  setup () {
+  setup() {
     return {
-      text: ref('')
-    }
-  }
-}
+      text: ref(""),
+    };
+  },
+};
 </script>
