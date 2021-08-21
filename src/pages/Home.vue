@@ -27,7 +27,7 @@
     <q-item>
         <q-item-section top avatar>
           <q-avatar rounded>
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+            <img src="https://www.treinus.com.br/blog/wp-content/uploads/2020/05/tipos-de-exercicios-f%C3%ADsicos.jpg">
           </q-avatar>
         </q-item-section>
 

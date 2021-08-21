@@ -15,7 +15,8 @@ const routes = [
       { path: '/novasenha', component: () => import('pages/NovaSenha.vue')},
       { path: '/perfilusuario', component: () => import('pages/PerfilUsuario.vue')},
       { path: '/home', component: () => import('pages/Home.vue')},
-      { path: '/serieexercicio', component: () => import('pages/SerieExercicio.vue')}
+      { path: '/serieexercicio', component: () => import('pages/SerieExercicio.vue')},
+      { path: '/testes', component: () => import('pages/TESTES.vue')}
     ]
   },
 

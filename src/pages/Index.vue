@@ -10,7 +10,7 @@
     <q-btn color="green" label="RecSenha3" to="/novasenha" class="q-my-md"/>
     <q-btn color="green" label="Home" to="/home" class="q-my-md"/>
     <q-btn color="green" label="SeriesExercicios" to="/serieexercicio" class="q-my-md"/>
-    <q-btn color="black" label="ListaMercado" to="/listamercado" class="q-my-md"/>
+    <q-btn color="black" label="TESTES" to="/testes" class="q-my-md"/>
     <q-btn color="green" label="PerfilUsuario" to="/perfilusuario" class="q-my-md"/>
     <q-btn color="green" label="ListaExercicios" to="/listaexercicios" class="q-my-md"/>
   </q-page>

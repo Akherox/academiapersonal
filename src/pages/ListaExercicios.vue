@@ -7,7 +7,7 @@
         <q-btn flat round dense icon="fas fa-user-circle" to="/perfilusuario" />
       </q-toolbar>
     </q-header>
-    <q-list bordered separator>
+    <!-- <q-list bordered separator>
       <q-item v-for="exercicio in exercicios" :key="exercicio">
         <q-item-section>
           <q-item-label>{{ exercicio.tipo }}</q-item-label>
@@ -18,8 +18,17 @@
           <q-item-label v-if="exercicio.concluido">Concluido</q-item-label>
         </q-item-section>
       </q-item>
-    </q-list>
-        <q-item>
+    </q-list> -->
+    <div class="q-pa-md" style="max-width: 500px">
+    <q-input v-model="search" filled type="search" hint="Pesquisar">
+        <template v-slot:append>
+          <q-icon name="search" />
+        </template>
+        
+      </q-input>
+    </div>
+    <q-list bordered separator>
+        <q-item v-for="exercicio in exercicios" :key="exercicio">
         <q-item-section top avatar>
           <q-avatar rounded>
             <img src="https://cdn.quasar.dev/img/boy-avatar.png">
@@ -27,8 +36,12 @@
         </q-item-section>
 
         <q-item-section>
-          <q-item-label>Single line item</q-item-label>
-          <q-item-label caption lines="2">Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.</q-item-label>
+          <q-item-label>{{ exercicio.tipo }}m</q-item-label>
+          <q-item-label caption >{{ exercicio.categoria }}</q-item-label>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label> Horas: {{ exercicio.cargaHoraria }}</q-item-label>
+          <q-item-label v-if="exercicio.concluido">Concluido</q-item-label>
         </q-item-section>
 
         <q-item-section side top>
@@ -40,99 +53,16 @@
           </div>
         </q-item-section>
       </q-item>
-      <q-separator spaced inset />
-          <q-item>
-        <q-item-section top avatar>
-          <q-avatar rounded>
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-          </q-avatar>
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>Single line item</q-item-label>
-          <q-item-label caption lines="2">Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.</q-item-label>
-        </q-item-section>
-
-        <q-item-section side top>
-          <q-item-label caption>2 min ago</q-item-label>
-          <div class="text-orange">
-            <q-icon name="star" />
-            <q-icon name="star" />
-            <q-icon name="star" />
-          </div>
-        </q-item-section>
-      </q-item>
-      <q-separator spaced inset />
-    <q-item>
-        <q-item-section top avatar>
-          <q-avatar rounded>
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-          </q-avatar>
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>Single line item</q-item-label>
-          <q-item-label caption lines="2">Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.</q-item-label>
-        </q-item-section>
-
-        <q-item-section side top>
-          <q-item-label caption>2 min ago</q-item-label>
-          <div class="text-orange">
-            <q-icon name="star" />
-            <q-icon name="star" />
-            <q-icon name="star" />
-          </div>
-        </q-item-section>
-      </q-item>
-            <q-separator spaced inset />
-    <q-item>
-        <q-item-section top avatar>
-          <q-avatar rounded>
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-          </q-avatar>
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>Single line item</q-item-label>
-          <q-item-label caption lines="2">Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.</q-item-label>
-        </q-item-section>
-
-        <q-item-section side top>
-          <q-item-label caption>2 min ago</q-item-label>
-          <div class="text-orange">
-            <q-icon name="star" />
-            <q-icon name="star" />
-            <q-icon name="star" />
-          </div>
-        </q-item-section>
-      </q-item>
-            <q-separator spaced inset />
-    <q-item>
-        <q-item-section top avatar>
-          <q-avatar rounded>
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-          </q-avatar>
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>Single line item</q-item-label>
-          <q-item-label caption lines="2">Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.</q-item-label>
-        </q-item-section>
-
-        <q-item-section side top>
-          <q-item-label caption>2 min ago</q-item-label>
-          <div class="text-orange">
-            <q-icon name="star" />
-            <q-icon name="star" />
-            <q-icon name="star" />
-          </div>
-        </q-item-section>
-      </q-item>
+      </q-list>
+<div class="q-pa-md" style="max-width: 500px">
+<div class="q-gutter-y-md">
     <q-btn
-      class="full-width"
-      label="Adicionar"
+      class="full-width "
+      label="Adicionar Exercicios"
       style="background: #11f500; color: black"
     />
+</div>
+</div>
     <!-- <q-footer>
       <q-tabs>
         <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios" />
@@ -144,7 +74,9 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 export default {
+
   name: "Page Index",
   data() {
     return {
@@ -186,5 +118,12 @@ export default {
       ],
     };
   },
+    setup () {
+    return {
+
+      search: ref('')
+    }
+  },
 };
 </script>
+
