@@ -10,9 +10,7 @@
     <h3>Serie</h3>
     <q-footer style="color: black">
       <q-tabs>
-        <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios" />
-        <q-route-tab icon="home" label="Home" to="/home" />
-        <q-route-tab icon="fitness_center" label="Serie" to="/serieexercicio" />
+        <a-menu/>
       </q-tabs>
     </q-footer>
   </q-page>
