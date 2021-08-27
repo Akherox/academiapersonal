@@ -4,7 +4,7 @@
       <q-toolbar style="color: black">
         <q-btn flat round dense icon="arrow_back_ios_new" to="/home" />
         <q-toolbar-title></q-toolbar-title>
-        <q-btn flat round dense icon="settings" to="/perfilusuario">
+        <q-btn flat round dense icon="settings" to="/dadosperfil">
           <q-menu>
             <div class="row no-wrap q-pa-md">
               <div class="column">
@@ -35,8 +35,62 @@
         </q-btn>
       </q-toolbar>
     </q-header>
-    <h3>Perfil</h3>
-    <q-footer style="color: black">
+    <h3>Perfil</h3> 
+      <q-item>
+        <q-item-section>
+          <q-avatar rounded size="100px"><img src="https://cdn.quasar.dev/img/boy-avatar.png"></q-avatar>
+        </q-item-section>
+      </q-item>
+             
+      <q-item>
+        <q-item-section>
+          <q-item-label>NOME</q-item-label>
+          <q-item-label caption lines="2">Willian Roberto Guimarães</q-item-label>
+        </q-item-section>
+         <q-separator spaced inset />
+        <q-item-section>
+          <q-item-label>SOBRENOME</q-item-label>
+          <q-item-label caption lines="2">Guimarães</q-item-label>
+        </q-item-section>
+      </q-item>
+        <q-separator spaced inset/>
+      <q-item> 
+       <q-item-section>
+          <q-item-label>APELIDO</q-item-label>
+          <q-item-label caption lines="2">Lico</q-item-label>
+        </q-item-section> 
+        <q-separator spaced inset/>
+        <q-item-section>
+          <q-item-label>DATA DE NASCIMENTO</q-item-label>
+          <q-input class="col" dark v-model="date" filled type="date" stack-label/>
+       </q-item-section> 
+      </q-item>  
+      <q-separator spaced inset/>
+      <q-item>
+        <q-item-section>
+          <q-item-label>SEXO</q-item-label>
+          <q-item-label caption lines="2">Masculino</q-item-label>  
+        </q-item-section>
+         <q-separator spaced inset/>   
+        <q-item-section>
+          <q-avatar rounded size="40px">  <img src="https://www.treinus.com.br/blog/wp-content/uploads/2020/05/tipos-de-exercicios-f%C3%ADsicos.jpg"> </q-avatar>
+          <q-item-label>OBJETIVO</q-item-label>
+          <q-item-label caption lines="2">Hipertofia Muscular/Cardio</q-item-label>
+        </q-item-section>
+      </q-item>
+      <q-separator spaced inset/>
+        <q-item-section>
+      <q-input class="col" dark v-model="time" filled type="time" label="Tempo disponivel" stack-label/>
+              
+       </q-item-section>
+       <q-separator spaced inset/>
+       <q-item>
+         <q-item-section>
+           <q-item-label>FRASE INSPIRADORA E MOTIVACIONAL</q-item-label>
+           <q-item-label caption lines="2">No pain, no gain </q-item-label>
+         </q-item-section> 
+        </q-item> 
+       <q-footer style="color: black">      
       <q-tabs>
         <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios" />
         <q-route-tab icon="home" label="Home" to="/home" />
@@ -54,7 +108,16 @@ export default {
     return {
       mobileData: ref(true),
       bluetooth: ref(false),
+      date: ref(""),
+      model1: ref(null),
+      time: ref("")
+      
     };
   },
 };
+
+
+
+
+
 </script>
