@@ -2,8 +2,7 @@
   <q-page padding>
     <q-header>
       <q-toolbar style="color: black">
-        <q-btn flat round dense icon="arrow_back_ios_new" to="/home" />
-        <q-toolbar-title class="text-center">Exercicios do Dia</q-toolbar-title>
+        <q-toolbar-title class="center">Exercicios do Dia</q-toolbar-title>
         <q-btn flat round dense icon="fas fa-user-circle">
           <q-menu transition-show="flip-right" transition-hide="flip-left">
             <q-list style="min-width: 100px">
@@ -33,30 +32,21 @@
                  :rows-per-page-options="[0]"
           />
         </div>
-    <!--<q-linear-progress stripe rounded size="20px" color="red" class="q-mt-sm" />
-      <q-btn
-      class="full-width"
-      label="Rotina Semanal"
-      style="background: #11f500; color: black"
-      />
-
-      -->
     <q-footer style="color: black">
       <q-tabs align="justify">
         <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios"/>
         <q-route-tab icon="home" label="Home" to="/home"/>
         <q-route-tab icon="fitness_center" label="Serie" to="/serieexercicio"/>
     <q-footer>
+      <q-tabs class="text-black">
         <a-menu/>
+
       </q-tabs>
     </q-footer>
   </q-page>
 </template>
 
 <script>
-import { ref } from 'vue'
-import AMenu from 'components/AMenu';
-
 
 const columns = [
   {
@@ -146,9 +136,6 @@ const rows = [
 ]
 
 export default {
-  components: {
-    AMenu
-  },
   setup () {
     return {
       columns,
