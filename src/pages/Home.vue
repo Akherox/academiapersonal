@@ -23,144 +23,32 @@
         </q-btn>
       </q-toolbar>
     </q-header>
-    <q-item>
-        <q-item-section top avatar>
-          <q-avatar rounded size="50px">
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-          </q-avatar>
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>
-            Supino Máquina 2-3 10-15 Leve-Moderada 60 Segundos
-            <q-checkbox size="md" v-model="option1" val="lg" label="Completo"/>
-            </q-item-label>
-          <q-item-label></q-item-label>
-        </q-item-section>
-
-      </q-item>
-      <q-separator spaced inset />
-      <q-item>
-        <q-item-section top avatar>
-          <q-avatar rounded size="50px">
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-          </q-avatar>
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>
-            Leg Press Horizintal 2-3 10-15 Leve-Moderada 60 Segundos
-            <q-checkbox size="md" v-model="option2" val="lg" label="Completo"/>
-            </q-item-label>
-        </q-item-section>
-
-      </q-item>
-      <q-separator spaced inset />
-      <q-item>
-        <q-item-section top avatar>
-          <q-avatar rounded size="50px">
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-          </q-avatar>
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>
-            Puxada Alta 2-3 10-15 Leve-Moderada 60 Segundos
-            <q-checkbox size="md" v-model="option3" val="lg" label="Completo"/>
-            </q-item-label>
-        </q-item-section>
-
-      </q-item>
-      <q-separator spaced inset />
-      <q-item>
-        <q-item-section top avatar>
-          <q-avatar rounded size="50px">
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-          </q-avatar>
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>
-            Mesa Flexora 2-3 10-15 Leve-Moderada 60 Segundos
-            <q-checkbox size="md" v-model="option4" val="lg" label="Completo"/>
-            </q-item-label>
-        </q-item-section>
-
-      </q-item>
-      <q-separator spaced inset />
-      <q-item>
-        <q-item-section top avatar>
-          <q-avatar rounded size="50px">
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-          </q-avatar>
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>
-            Abdominal 2-3 10-15 Leve-Moderada 60 Segundos 
-            <q-checkbox size="md" v-model="option5" val="lg" label="Completo"/>
-            </q-item-label>
-          
-        </q-item-section>
-
-      </q-item>
-      <q-separator spaced inset />
-      <q-item>
-        <q-item-section top avatar>
-          <q-avatar rounded size="50px">
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-          </q-avatar>
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>
-            Extensão de Quadril 2-3 10-15 Leve-Moderada 60 Segundos
-            <q-checkbox size="md" v-model="option6" val="lg" label="Completo"/>
-            </q-item-label>
-        </q-item-section>
-
-      </q-item>
-      <q-separator spaced inset />
-      <q-item>
-        <q-item-section top avatar>
-          <q-avatar rounded size="50px">
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-          </q-avatar>
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>
-            Rosca Bícipes 2-3 10-15 Leve-Moderada 60 Segundos
-            <q-checkbox size="md" v-model="option7" val="lg" label="Completo"/>
-            </q-item-label>
-        </q-item-section>
-
-      </q-item>
-      <q-separator spaced inset />
-      <q-item>
-        <q-item-section top avatar>
-          <q-avatar rounded size="50px">
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-          </q-avatar>
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>
-            Trícipes Polia 2-3 10-15 Leve-Moderada 60 Segundos
-            <q-checkbox size="md" v-model="option8" val="lg" label="Completo"/>
-            </q-item-label>
-        </q-item-section>
-
-      </q-item>
-      <q-separator spaced inset />
-    <q-linear-progress stripe rounded size="20px" :value="progress2" color="red" class="q-mt-sm" />
+    
+        <div class="q-pa-md">
+            <q-table
+                 title="Exercícios de Hoje"
+                 :rows="rows"
+                 :columns="columns"
+                 row-key="name"
+                 :rows-per-page-options="[0]"
+          />
+        </div>
+    <!--<q-linear-progress stripe rounded size="20px" color="red" class="q-mt-sm" />
       <q-btn
       class="full-width"
       label="Rotina Semanal"
       style="background: #11f500; color: black"
       />
+
+      -->
+    <q-footer style="color: black">
+      <q-tabs align="justify">
+        <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios"/>
+        <q-route-tab icon="home" label="Home" to="/home"/>
+        <q-route-tab icon="fitness_center" label="Serie" to="/serieexercicio"/>
     <q-footer>
         <a-menu/>
+      </q-tabs>
     </q-footer>
   </q-page>
 </template>
@@ -169,27 +57,104 @@
 import { ref } from 'vue'
 import AMenu from 'components/AMenu';
 
+
+const columns = [
+  {
+    name: 'name',
+    required: true,
+    label: 'Descrição do Exercício',
+    align: 'left',
+    field: row => row.name,
+    format: val => `${val}`,
+    //sortable: true
+  },
+  { name: 'videos', align: 'left', label: 'Exemplos', field: 'videos' },
+  { name: 'series', align: 'center', label: 'Séries', field: 'series' },
+  { name: 'repetições', align: 'center', label: 'Repetições', field: 'rep' },
+  { name: 'carga', align: 'center', label: 'Carga', field: 'carga' },
+  { name: 'intervalo', align: 'center', label: 'Intervalo', field: 'intervalo' },
+  { name: 'checkbox', align: 'center', label: 'Checkbox', field: 'checkbox' }
+]
+
+const rows = [
+  {
+    //videos: src='https://cdn.quasar.dev/img/boy-avatar.png',
+    name: 'Supino Máquina',
+    series: '2 - 3',
+    rep: '10 - 15',
+    carga: "Leve - Moderada",
+    intervalo: "60 Seg",
+    checkbox: "Concluído"
+        
+  },
+  {
+    name: 'Leg Press Horizontal',
+    series: '2 - 3',
+    rep: '10 - 15',
+    carga: "Leve - Moderada",
+    intervalo: "60 Seg",
+    checkbox: "Concluído"
+  },
+  {
+    name: 'Puxada Alta',
+    series: '2 - 3',
+    rep: '10 - 15',
+    carga: "Leve - Moderada",
+    intervalo: "60 Seg",
+    checkbox: "Concluído"
+  },
+  {
+    name: 'Mesa Flexora',
+    series: '2 - 3',
+    rep: '10 - 15',
+    carga: "Leve - Moderada",
+    intervalo: "60 Seg",
+    checkbox: "Concluído"
+  },
+  {
+    name: 'Abdominal',
+    series: '2 - 3',
+    rep: '10 - 15',
+    carga: "Leve - Moderada",
+    intervalo: "60 Seg",
+    checkbox: "Concluído"
+  },
+  {
+    name: 'Extenção de Quadril',
+    series: '2 - 3',
+    rep: '10 - 15',
+    carga: "Leve - Moderada",
+    intervalo: "60 Seg",
+    checkbox: "Concluído"
+  },
+  {
+    name: 'Rosca Bícipes',
+    series: '2 - 3',
+    rep: '10 - 15',
+    carga: "Leve - Moderada",
+    intervalo: "60 Seg",
+    checkbox: "Concluído"
+  },
+  {
+    name: 'Trícipes Polia',
+    series: '2 - 3',
+    rep: '10 - 15',
+    carga: "Leve - Moderada",
+    intervalo: "60 Seg",
+    checkbox: "Concluído"
+  }
+]
+
 export default {
   components: {
     AMenu
   },
   setup () {
     return {
-      option1: ref(false),
-      option2: ref(false),
-      option3: ref(false),
-      option4: ref(false),
-      option5: ref(false),
-      option6: ref(false),
-      option7: ref(false),
-      option8: ref(false),
-      option9: ref(false),
-      option10: ref(false),
-      option11: ref(false),
-      option12: ref(false),
-
-      progress2: 0.725
+      columns,
+      rows
     }
   }
 }
+
 </script>
