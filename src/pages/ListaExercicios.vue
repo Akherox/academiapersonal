@@ -50,7 +50,7 @@
          
         </q-item-section>
                 <q-item-section side top>
-          <q-checkbox v-model="item.selecionado" />
+          <q-checkbox v-model="item.selecionado" size="md" />
         </q-item-section>
       </q-item>
     </q-list>
