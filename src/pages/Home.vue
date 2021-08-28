@@ -38,12 +38,18 @@
       label="Rotina Semanal"
       style="background: #11f500; color: black"
       />
+<<<<<<< HEAD
       -->
     <q-footer style="color: black">
       <q-tabs align="justify">
         <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios"/>
         <q-route-tab icon="home" label="Home" to="/home"/>
         <q-route-tab icon="fitness_center" label="Serie" to="/serieexercicio"/>
+=======
+    <q-footer>
+      <q-tabs class="text-black">
+        <a-menu/>
+>>>>>>> 4b326bdd341acba8a5ee2ce51047593132e11dbe
       </q-tabs>
     </q-footer>
   </q-page>
