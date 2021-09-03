@@ -29,17 +29,19 @@
                  :rows="rows"
                  :columns="columns"
                  row-key="name"
-                 :rows-per-page-options="[0]"
-          />
+                 :rows-per-page-options="[0]"/>
         </div>
     <q-footer style="color: black">
       <q-tabs align="justify">
         <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios"/>
         <q-route-tab icon="home" label="Home" to="/home"/>
         <q-route-tab icon="fitness_center" label="Serie" to="/serieexercicio"/>
+        </q-tabs>
+        </q-footer>
     <q-footer>
       <q-tabs class="text-black">
         <a-menu/>
+        
 
       </q-tabs>
     </q-footer>
