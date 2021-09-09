@@ -27,10 +27,11 @@
       <q-input filled v-model="text" label="E-mail" />
       <q-input filled v-model="text" label="Confirmar e-mail" />
       <div class="row">
-        <q-btn
-          class="col-12"
+        <q-btn push
+          class="col-12 glossy"
           label="Enviar para e-mail"
           style="background: #11f500; color: black"
+          to="/codigorecuperarsenha"
         />
       </div>
     </q-form>

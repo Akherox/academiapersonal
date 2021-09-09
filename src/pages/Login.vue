@@ -45,8 +45,8 @@
         <div class="col q-col-gutter-y-md">
           <div class="row">
             <div class="col">
-              <q-btn
-                class="full-width"
+              <q-btn push
+                class="full-width glossy"
                 label="Fazer Login"
                 style="background: #11f500; color: black"
                 to="/home"
@@ -56,16 +56,16 @@
 
           <div class="row q-col-gutter-md">
             <div class="col">
-              <q-btn
-                class="full-width"
+              <q-btn push
+                class="full-width glossy"
                 label="Esqueci a Senha"
                 style="color: white"
                 to="/mailrecuperarsenha"
               />
             </div>
             <div class="col">
-              <q-btn
-                class="full-width"
+              <q-btn push
+                class="full-width glossy"
                 label="Cadastrar"
                 style="color: white"
                 to="/cadastro"

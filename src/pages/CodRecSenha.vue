@@ -48,10 +48,11 @@
         style="font-size: 5rem; color: #11f500"
       />
       <div class="row">
-        <q-btn
-          class="col-12"
+        <q-btn push
+          class="col-12 glossy"
           label="Continuar"
           style="background: #11f500; color: black"
+          to="/novasenha"
         />
       </div>
     </q-form>
