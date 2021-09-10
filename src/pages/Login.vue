@@ -1,7 +1,7 @@
 <template>
-  <q-page padding>
+  <q-page padding class="fixed-center" style="max-width: 600px">
     <q-btn color="green" label="⇦" to="/" class="q-my-sm" />
-    <q-form class="q-pa-md q-gutter-md" style="max-width: 500px">
+    <q-form class="q-pa-md q-gutter-md" style="max-width: 600px">
       <h3></h3>
       <div class="flex justify-center">
         <q-img
@@ -11,11 +11,12 @@
         />
       </div>
       <q-input
-        standout
+       filled
         v-model="text"
-        label="Usuário"
+        hint="Usuário"
         :dense="dense"
         style="color: white"
+        
       />
       <q-input
         v-model="password"
@@ -57,7 +58,9 @@
           <div class="row q-col-gutter-md">
             <div class="col">
               <q-btn push
-                class="full-width glossy"
+                class="full-width glossy"/>
+              <q-btn
+                class="full-width flex justify-center"
                 label="Esqueci a Senha"
                 style="color: white"
                 to="/mailrecuperarsenha"
@@ -65,7 +68,9 @@
             </div>
             <div class="col">
               <q-btn push
-                class="full-width glossy"
+                class="full-width glossy flex justify-center"/>
+              <q-btn
+                class="full-width"
                 label="Cadastrar"
                 style="color: white"
                 to="/cadastro"
