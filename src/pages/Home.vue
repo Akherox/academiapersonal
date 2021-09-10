@@ -1,17 +1,6 @@
 <template>
   <q-page padding>
     <q-header>
-          <q-bar dense class="bg-black text-white">
-      <div>mobi-net</div>
-      <q-icon name="email" />
-      <q-space />
-      <q-icon name="bluetooth" />
-      <q-icon name="signal_wifi_4_bar" />
-      <q-icon name="signal_cellular_4_bar" />
-      <div class="gt-xs">100%</div>
-      <q-icon name="battery_full" />
-      <div>10:00AM</div>
-    </q-bar>
       <q-toolbar style="color: black">
         <q-toolbar-title class="center">Exercicios do Dia</q-toolbar-title>
         <q-btn flat round dense icon="fas fa-user-circle">
@@ -43,6 +32,18 @@
         :rows-per-page-options="[0]"
       />
     </div>
+    <q-circular-progress
+      show-value
+      font-size="12px"
+      :value="value"
+      size="50px"
+      :thickness="0.22"
+      color="teal"
+      track-color="grey-3"
+      class="q-ma-md"
+    >
+      {{ value }}%
+    </q-circular-progress>
     <!--<q-linear-progress stripe rounded size="20px" color="red" class="q-mt-sm" />
       <q-btn
       class="full-width"
@@ -50,23 +51,6 @@
       style="background: #11f500; color: black"
       />
       -->
-    <q-footer style="color: black">
-      <a-menu />
-        <div class="q-pa-md">
-            <q-table
-                 title="Exercícios de Hoje"
-                 :rows="rows"
-                 :columns="columns"
-                 row-key="name"
-                 :rows-per-page-options="[0]"/>
-        </div>
-    <q-footer style="color: black">
-      <q-tabs align="justify">
-        <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios"/>
-        <q-route-tab icon="home" label="Home" to="/home"/>
-        <q-route-tab icon="fitness_center" label="Serie" to="/serieexercicio"/>
-        </q-tabs>
-        </q-footer>
     <q-footer>
       <q-tabs class="text-black">
         <a-menu/>
@@ -178,6 +162,7 @@ export default {
     return {
       columns,
       rows,
+      value: 81
     };
   },
 };
