@@ -2,7 +2,7 @@
   <q-page padding>
     <q-header>
       <q-toolbar style="color: black">
-        <q-toolbar-title class="center">Exercicios do Dia</q-toolbar-title>
+        <q-toolbar-title class="text-center">Exercicios do Dia</q-toolbar-title>
         <q-btn flat round dense icon="fas fa-user-circle">
           <q-menu transition-show="flip-right" transition-hide="flip-left">
             <q-list style="min-width: 100px">
@@ -10,11 +10,7 @@
                 <q-item-section>Meu Perfil</q-item-section>
               </q-item>
               <q-separator />
-              <q-item clickable>
-                <q-item-section>Trocar Usuário</q-item-section>
-              </q-item>
-              <q-separator />
-              <q-item clickable>
+              <q-item clickable to="/login">
                 <q-item-section>Sair</q-item-section>
               </q-item>
             </q-list>

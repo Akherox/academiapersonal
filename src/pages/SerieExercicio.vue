@@ -8,9 +8,18 @@
       </q-toolbar>
     </q-header>
     <h3>Serie</h3>
-    <q-footer style="color: black">
-      <q-tabs>
+ <q-footer style="color: black">
+      <q-tabs align="justify">
+        <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios"/>
+        <q-route-tab icon="home" label="Home" to="/home"/>
+        <q-route-tab icon="fitness_center" label="Serie" to="/serieexercicio"/>
+        </q-tabs>
+        </q-footer>
+    <q-footer>
+      <q-tabs class="text-black">
         <a-menu/>
+        
+
       </q-tabs>
     </q-footer>
   </q-page>

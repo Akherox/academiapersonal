@@ -59,23 +59,34 @@
         <a-btn label="Adicionar Exercicios" />
       </div>
     </div>
+    <q-footer style="color: black">
+      <q-tabs align="justify">
+        <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios"/>
+        <q-route-tab icon="home" label="Home" to="/home"/>
+        <q-route-tab icon="fitness_center" label="Serie" to="/serieexercicio"/>
+        </q-tabs>
+        </q-footer>
     <q-footer>
-      <a-menu/>
+      <q-tabs class="text-black">
+        <a-menu/>
+        
+
+      </q-tabs>
     </q-footer>
   </q-page>
 </template>
 
 <script>
 import { ref } from "vue";
-import ABtn from 'components/ABtn'
-import AMenu from 'components/AMenu';
+import ABtn from 'components/ABtn';
+//import AMenu from 'components/AMenu';
 
-export default {
+  export default {
   name: "Page Index",
   components: {
-    ABtn,
-    AMenu
+  ABtn
   },
+  
   data() {
     return {
       itens: [
