@@ -3,7 +3,7 @@
     <q-header>
       <q-toolbar style="color: black">
         <q-btn flat round dense icon="arrow_back_ios_new" to="/home" />
-        <q-toolbar-title class="text-center">Exercicios</q-toolbar-title>
+        <q-toolbar-title class="text-center">EXERCICIOS</q-toolbar-title>
         <q-btn flat round dense icon="fas fa-user-circle" to="/perfilusuario" />
       </q-toolbar>
     </q-header>
@@ -20,7 +20,7 @@
       </q-item>
     </q-list> -->
     <div class="q-pa-md" style="max-width: 500px">
-      <q-input v-model="search" filled type="search" hint="Pesquisar">
+      <q-input v-model="search" filled type="search" hint="Pesquisar exercicio">
         <template v-slot:append>
           <q-icon name="search" />
         </template>
@@ -39,24 +39,24 @@
           <q-item-label>{{ item.exercicio.tipo }}m</q-item-label>
           <q-item-label caption>{{ item.exercicio.categoria }}</q-item-label>
         </q-item-section>
-        <q-item-section>
+        <!-- <q-item-section>
           <q-item-label> Horas: {{ item.exercicio.cargaHoraria }}</q-item-label>
           <q-item-label v-if="item.exercicio.concluido">Concluido</q-item-label>
         </q-item-section>
 
         <q-item-section side top>
           <q-item-label caption>2 min ago</q-item-label>
-          <q-rating v-model="item.exercicio.avaliacao" icon="star" color="orange" />
-         
-        </q-item-section>
-                <q-item-section side top>
-          <q-checkbox v-model="item.selecionado" size="md" />
+          <q-rating v-model="item.exercicio.avaliacao" icon="star" color="orange" /> 
+        </q-item-section> -->
+
+        <q-item-section side right >
+          <q-checkbox v-model="item.selecionado" size="lg"/>
         </q-item-section>
       </q-item>
     </q-list>
     <div class="q-pa-md" style="max-width: 500px">
       <div class="q-gutter-y-md">
-        <a-btn label="Adicionar Exercicios" />
+        <a-btn push label="Adicionar Exercicios" class="glossy"/>
       </div>
     </div>
     <q-footer style="color: black">

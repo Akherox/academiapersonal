@@ -54,8 +54,8 @@
         type="textarea"
       />
       <div class="row">
-        <q-btn
-          class="col-12"
+        <q-btn push
+          class="col-12 glossy"
           label="Prosseguir"
           style="background: #11f500; color: black"
           to="/login"

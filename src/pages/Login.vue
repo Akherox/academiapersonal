@@ -46,8 +46,8 @@
         <div class="col q-col-gutter-y-md">
           <div class="row">
             <div class="col">
-              <q-btn
-                class="full-width"
+              <q-btn push
+                class="full-width glossy"
                 label="Fazer Login"
                 style="background: #11f500; color: black"
                 to="/home"
@@ -56,15 +56,19 @@
           </div>
 
           <div class="row q-col-gutter-md">
-            <div class="col flex justify-center">
+            <div class="col">
+              <q-btn push
+                class="full-width glossy"/>
               <q-btn
-                class="full-width"
+                class="full-width flex justify-center"
                 label="Esqueci a Senha"
                 style="color: white"
                 to="/mailrecuperarsenha"
               />
             </div>
-            <div class="col flex justify-center">
+            <div class="col">
+              <q-btn push
+                class="full-width glossy flex justify-center"/>
               <q-btn
                 class="full-width"
                 label="Cadastrar"
@@ -83,6 +87,7 @@
 import { ref } from "vue";
 
 export default {
+  
   setup() {
     return {
       password: ref(""),
