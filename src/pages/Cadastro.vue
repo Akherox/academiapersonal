@@ -1,6 +1,6 @@
 <template>
-  <q-page padding>
-    <q-btn color="green" label="⇦" to="/" class="q-my-sm" />
+  <q-page padding class="flex justify-center">
+    
     <q-form class="q-pa-md q-gutter-md" style="max-width: 500px">
       <h3></h3>
       <div class="flex justify-center">

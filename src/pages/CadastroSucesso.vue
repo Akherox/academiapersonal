@@ -1,6 +1,5 @@
 <template>
   <q-page padding>
-    <q-btn color="green" label="⇦" to="/" class="q-my-sm" />
     <div class="q-pa-md q-gutter-md text-center">
       <h3></h3>
       <div class="flex justify-center">
