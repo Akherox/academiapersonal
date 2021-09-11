@@ -26,7 +26,7 @@
         </template>
       </q-input>
     </div>
-    <q-list bordered separator>
+    <!-- <q-list bordered separator>
       <q-item v-for="item in itens" :key="item.exercicio">
 
         <q-item-section top avatar>
@@ -39,7 +39,8 @@
           <q-item-label>{{ item.exercicio.tipo }}m</q-item-label>
           <q-item-label caption>{{ item.exercicio.categoria }}</q-item-label>
         </q-item-section>
-        <!-- <q-item-section>
+        
+        <q-item-section>
           <q-item-label> Horas: {{ item.exercicio.cargaHoraria }}</q-item-label>
           <q-item-label v-if="item.exercicio.concluido">Concluido</q-item-label>
         </q-item-section>
@@ -47,34 +48,62 @@
         <q-item-section side top>
           <q-item-label caption>2 min ago</q-item-label>
           <q-rating v-model="item.exercicio.avaliacao" icon="star" color="orange" /> 
-        </q-item-section> -->
+        </q-item-section> 
 
         <q-item-section side right >
           <q-checkbox v-model="item.selecionado" size="lg"/>
         </q-item-section>
       </q-item>
+    </q-list> -->
+    <q-list bordered separator xl>
+      <q-card class="my-card" flat bordered>
+        <q-card-section
+          horizontal
+          v-for="item in itens"
+          :key="item.exercicio"
+          style="background: radial-gradient(circle, #bdbdbd 0%, #212121 100%)"
+        >
+          <q-card-section horizontal class="q-pt-xs">
+            <q-card-section class="col-6">
+              <q-video :src="item.exercicio.videoUrl" />
+              
+            </q-card-section>
+            <q-card-actions vertical class="justify-around q-px-md">
+              <q-item-section>
+                <q-item-label>{{ item.exercicio.tipo }}</q-item-label>
+                <q-item-label caption>{{
+                  item.exercicio.categoria
+                }}</q-item-label>
+              </q-item-section>
+            </q-card-actions>
+            <q-item-section class="absolute-top-right">
+              <q-checkbox v-model="item.selecionado" size="lg" />
+            </q-item-section>
+          </q-card-section>
+        </q-card-section>
+      </q-card>
     </q-list>
     <div class="q-pa-md" style="max-width: 500px">
       <div class="q-gutter-y-md">
-        <a-btn push label="Adicionar Exercicios" class="glossy"/>
+        <a-btn push label="Adicionar Exercicios" class="glossy" />
       </div>
     </div>
     <q-footer>
-      <a-menu/>
+      <a-menu />
     </q-footer>
   </q-page>
 </template>
 
 <script>
 import { ref } from "vue";
-import ABtn from 'components/ABtn'
-import AMenu from 'components/AMenu';
+import ABtn from "components/ABtn";
+import AMenu from "components/AMenu";
 
 export default {
   name: "Page Index",
   components: {
     ABtn,
-    AMenu
+    AMenu,
   },
   data() {
     return {
@@ -87,6 +116,7 @@ export default {
             cargaHoraria: 0.3,
             concluido: false,
             dataUltimoJogo: "2021-06-01",
+            videoUrl: "https://www.youtube.com/embed/vWFHYnVdBp4",
             avaliacao: 4,
           },
         },
@@ -99,6 +129,7 @@ export default {
             cargaHoraria: 0.15,
             concluido: true,
             dataUltimoJogo: "2021-07-10",
+            videoUrl: "https://www.youtube.com/embed/-EIXZD5AEuE",
             avaliacao: 5,
           },
         },
@@ -110,6 +141,7 @@ export default {
             cargaHoraria: 0.2,
             concluido: false,
             dataUltimoJogo: "2021-06-01",
+            videoUrl: "https://www.youtube.com/embed/utsUU0dC2fU",
             avaliacao: 4,
           },
         },
@@ -122,6 +154,7 @@ export default {
             cargaHoraria: 0.25,
             concluido: true,
             dataUltimoJogo: "2021-07-10",
+            videoUrl: "https://www.youtube.com/embed/vWFHYnVdBp4",
             avaliacao: 5,
           },
         },
@@ -135,3 +168,8 @@ export default {
   },
 };
 </script>
+<style lang="sass" scoped>
+.my-card
+  width: 100%
+  max-width: 470px
+</style>

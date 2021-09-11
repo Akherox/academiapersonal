@@ -2,7 +2,7 @@
   <q-page padding>
     <q-header>
       <q-toolbar style="color: black">
-        <q-toolbar-title class="center">Exercicios do Dia</q-toolbar-title>
+        <q-toolbar-title class="text-center">Exercicios do Dia</q-toolbar-title>
         <q-btn flat round dense icon="fas fa-user-circle">
           <q-menu transition-show="flip-right" transition-hide="flip-left">
             <q-list style="min-width: 100px">
@@ -52,9 +52,7 @@
       />
       -->
     <q-footer>
-      <q-tabs class="text-black">
         <a-menu/>
-      </q-tabs>
     </q-footer>
   </q-page>
 </template>
