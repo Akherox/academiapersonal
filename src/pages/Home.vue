@@ -10,7 +10,7 @@
                 <q-item-section>Meu Perfil</q-item-section>
               </q-item>
               <q-separator />
-              <q-item clickable to="/login">
+              <q-item clickable to="/">
                 <q-item-section>Sair</q-item-section>
               </q-item>
             </q-list>
@@ -47,10 +47,12 @@
       style="background: #11f500; color: black"
       />
       -->
-    <q-footer>
-      <q-tabs class="text-black">
-        <a-menu/>
-      </q-tabs>
+      <q-footer style="color: black">
+      <q-tabs align="justify">
+        <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios"/>
+        <q-route-tab icon="home" label="Home" to="/home"/>
+        <q-route-tab icon="fitness_center" label="Serie" to="/serieexercicio"/>
+        </q-tabs>
     </q-footer>
   </q-page>
 </template>
@@ -152,7 +154,6 @@ const rows = [
 
 export default {
   components: {
-    AMenu,
   },
   setup() {
     return {
