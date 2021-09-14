@@ -47,17 +47,8 @@
       style="background: #11f500; color: black"
       />
       -->
-<<<<<<< HEAD
     <q-footer>
-        <a-menu/>
-=======
-      <q-footer style="color: black">
-      <q-tabs align="justify">
-        <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios"/>
-        <q-route-tab icon="home" label="Home" to="/home"/>
-        <q-route-tab icon="fitness_center" label="Serie" to="/serieexercicio"/>
-        </q-tabs>
->>>>>>> 41e8a18c18f6874c5f1df3a6c68d691958a7245d
+        <a-menu />
     </q-footer>
   </q-page>
 </template>
@@ -158,7 +149,9 @@ const rows = [
 ];
 
 export default {
+  name: "Page Index",
   components: {
+    AMenu
   },
   setup() {
     return {
