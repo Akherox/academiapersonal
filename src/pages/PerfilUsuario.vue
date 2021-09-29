@@ -76,6 +76,9 @@
           <q-avatar rounded size="40px">  <img src="https://www.treinus.com.br/blog/wp-content/uploads/2020/05/tipos-de-exercicios-f%C3%ADsicos.jpg"> </q-avatar>
           <q-item-label>OBJETIVO</q-item-label>
           <q-item-label caption lines="2">Hipertofia Muscular/Cardio</q-item-label>
+          
+          
+
         </q-item-section>
       </q-item>
       <q-separator spaced inset/>
@@ -83,12 +86,15 @@
       <q-input class="col" dark v-model="time" filled type="time" label="Tempo disponivel" stack-label/>
               
        </q-item-section>
-       <q-separator spaced inset/>
-       <q-item>
+         <q-separator spaced inset/>
+        <q-item>
          <q-item-section>
            <q-item-label>FRASE INSPIRADORA E MOTIVACIONAL</q-item-label>
            <q-item-label caption lines="2">No pain, no gain </q-item-label>
          </q-item-section> 
+         
+         
+
         </q-item> 
        <q-footer style="color: black">      
       <q-tabs>
