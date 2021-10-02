@@ -55,39 +55,16 @@
         </q-item-section>
       </q-item>
     </q-list> -->
-    <q-list bordered separator xl>
-      <q-card class="my-card" flat bordered>
-        <q-card-section
-          horizontal
-          v-for="item in itens"
-          :key="item.exercicio"
-          style="background: radial-gradient(circle, #bdbdbd 0%, #212121 100%)"
-        >
-          <q-card-section horizontal class="q-pt-xs">
-            <q-card-section class="col-6">
-              <q-video :src="item.exercicio.videoUrl" />
-              
-            </q-card-section>
-            <q-card-actions vertical class="justify-around q-px-md">
-              <q-item-section>
-                <q-item-label>{{ item.exercicio.tipo }}</q-item-label>
-                <q-item-label caption>{{
-                  item.exercicio.categoria
-                }}</q-item-label>
-              </q-item-section>
-            </q-card-actions>
-            <q-item-section class="absolute-top-right">
-              <q-checkbox v-model="item.selecionado" size="lg" />
-            </q-item-section>
-          </q-card-section>
-        </q-card-section>
-      </q-card>
-    </q-list>
+
+    <div class="row q-gutter-md">
+      <exercicio-card :exercicio="item.exercicio" v-for="item in itens" :key="item.exercicio.id" v-model:selecionado="item.selecionado" />
+    </div>
+
     <div class="q-pa-md" style="max-width: 500px">
       <div class="q-gutter-y-md">
         <a-btn push label="Adicionar Exercicios" class="glossy" />
       </div>
-    </div>
+    </div> 
     <q-footer>
       <a-menu />
     </q-footer>
@@ -95,23 +72,26 @@
 </template>
 
 <script>
-import { ref } from "vue";
 import ABtn from "components/ABtn";
 import AMenu from "components/AMenu";
+import ExercicioCard from 'components/ExercicioCard';
 
-  export default {
+export default {
   name: "Page Index",
   components: {
     ABtn,
     AMenu,
+    ExercicioCard,
   },
-  
+
   data() {
     return {
+      search: "",
       itens: [
         {
           selecionado: false,
           exercicio: {
+            id: 1,
             tipo: "HIPERTROFIA MUSCULAR",
             categoria: "Aumento da massa magra",
             cargaHoraria: 0.3,
@@ -124,6 +104,7 @@ import AMenu from "components/AMenu";
         {
           selecionado: false,
           exercicio: {
+            id: 2,
             tipo: "RESISTÊNCIA MUSCULAR",
             categoria: "Manter a força máxima num músculo",
             dataLancamento: "2019-04-01",
@@ -137,6 +118,7 @@ import AMenu from "components/AMenu";
         {
           selecionado: false,
           exercicio: {
+            id: 3,
             tipo: "POTÊNCIA MUSCULAR",
             categoria: "Velocidade e força exercida",
             cargaHoraria: 0.2,
@@ -149,6 +131,7 @@ import AMenu from "components/AMenu";
         {
           selecionado: false,
           exercicio: {
+            id: 4,
             tipo: "HIT",
             categoria: "Alta intensidade",
             dataLancamento: "2019-04-01",
@@ -161,16 +144,7 @@ import AMenu from "components/AMenu";
         },
       ],
     };
-  },
-  setup() {
-    return {
-      search: ref(""),
-    };
-  },
+  }
 };
 </script>
-<style lang="sass" scoped>
-.my-card
-  width: 100%
-  max-width: 470px
-</style>
+

@@ -19,7 +19,7 @@
       </q-toolbar>
     </q-header>
 
-    <div class="q-pa-md">
+    <!-- <div class="q-pa-md">
       <q-table
         title="Exercícios de Hoje"
         :rows="rows"
@@ -27,7 +27,7 @@
         row-key="name"
         :rows-per-page-options="[0]"
       />
-    </div>
+    </div> -->
     <q-circular-progress
       show-value
       font-size="12px"
