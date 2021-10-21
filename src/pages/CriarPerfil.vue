@@ -1,6 +1,5 @@
 <template>
   <q-page padding>
-    <q-btn color="green" label="⇦" to="/" class="q-my-sm" />
     <div class="q-pa-md q-gutter-md text-center">
       <q-icon name="account_circle" style="font-size: 10rem; color: #11f500" />
     </div>
@@ -54,11 +53,11 @@
         type="textarea"
       />
       <div class="row">
-        <q-btn
-          class="col-12"
+        <q-btn push
+          class="col-12 glossy"
           label="Prosseguir"
           style="background: #11f500; color: black"
-          to="/login"
+          to="/"
         />
       </div>
     </q-form>

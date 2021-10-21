@@ -1,6 +1,5 @@
 <template>
   <q-page padding>
-    <q-btn color="green" label="⇦" to="/" class="q-my-sm" />
     <div class="q-pa-md q-gutter-md text-center">
       <h3></h3>
       <div class="flex justify-center">
@@ -16,8 +15,8 @@
     </div>
     <div class="q-pa-md">
       <div class="row">
-        <q-btn
-          class="col-12"
+        <q-btn push
+          class="col-12 glossy"
           label="Criar Perfil"
           style="background: #11f500; color: black"
           to="/criarperfil"

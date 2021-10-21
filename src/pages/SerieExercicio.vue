@@ -7,19 +7,18 @@
         <q-btn flat round dense icon="fas fa-user-circle" to="/perfilusuario" />
       </q-toolbar>
     </q-header>
+    <q-btn color="green" label="⇦" to="/" class="q-my-sm" />
     <h3>Serie</h3>
-    <q-footer style="color: black">
-      <q-tabs>
-        <q-route-tab icon="fact_check" label="Lista" to="/listaexercicios" />
-        <q-route-tab icon="home" label="Home" to="/home" />
-        <q-route-tab icon="fitness_center" label="Serie" to="/serieexercicio" />
-      </q-tabs>
+    <q-footer >
+        <a-menu/>
     </q-footer>
   </q-page>
 </template>
 
 <script>
+import AMenu from 'components/AMenu';
 export default {
+  components: { AMenu },
   // name: 'PageName',
 };
 </script>
