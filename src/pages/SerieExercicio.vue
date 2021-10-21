@@ -9,6 +9,41 @@
     </q-header>
     <q-btn color="green" label="⇦" to="/" class="q-my-sm" />
     <h3>Serie</h3>
+
+    <div class="q-pa-md" style="max-width: 400px">
+    <q-list bordered separator>
+      <q-item clickable v-ripple>
+        <q-item-section top avatar>
+          <q-avatar color="primary" text-color="white" square icon="check" />
+        </q-item-section>
+        <q-item-section>
+          <q-item-label overline>OVERLINE</q-item-label>
+          <q-item-label>Item with caption</q-item-label>
+        </q-item-section>
+      </q-item>
+
+      <q-item clickable v-ripple>
+        <q-item-section top avatar>
+          <q-avatar color="primary" text-color="white" square icon="check" />
+        </q-item-section>
+        <q-item-section>
+          <q-item-label overline>OVERLINE</q-item-label>
+          <q-item-label>Item with caption</q-item-label>
+        </q-item-section>
+      </q-item>
+
+      <q-item clickable v-ripple>
+        <q-item-section top avatar>
+          <q-avatar color="primary" text-color="white" square icon="check" />
+        </q-item-section>
+        <q-item-section>
+          <q-item-label overline>OVERLINE</q-item-label>
+          <q-item-label>Item with caption</q-item-label>
+        </q-item-section>
+      </q-item>
+    </q-list>
+  </div>
+
     <q-footer >
         <a-menu/>
     </q-footer>
