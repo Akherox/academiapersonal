@@ -17,8 +17,8 @@
           <q-avatar color="primary" text-color="white" square icon="check" />
         </q-item-section>
         <q-item-section>
-          <q-item-label overline>OVERLINE</q-item-label>
-          <q-item-label>Item with caption</q-item-label>
+          <q-item-label >Curl com barra</q-item-label>
+          <q-item-label overline>3 x 15-20 (35 carga)</q-item-label>
         </q-item-section>
       </q-item>
 
@@ -27,8 +27,8 @@
           <q-avatar color="primary" text-color="white" square icon="check" />
         </q-item-section>
         <q-item-section>
-          <q-item-label overline>OVERLINE</q-item-label>
-          <q-item-label>Item with caption</q-item-label>
+          <q-item-label >Curl com barra agarre afastado</q-item-label>
+          <q-item-label overline>3 x 15-20 (35 carga)</q-item-label>
         </q-item-section>
       </q-item>
 
@@ -37,8 +37,8 @@
           <q-avatar color="primary" text-color="white" square icon="check" />
         </q-item-section>
         <q-item-section>
-          <q-item-label overline>OVERLINE</q-item-label>
-          <q-item-label>Item with caption</q-item-label>
+          <q-item-label >Curl com barra ez</q-item-label>
+          <q-item-label overline>3 x 15-20 (35 carga)</q-item-label>
         </q-item-section>
       </q-item>
     </q-list>
