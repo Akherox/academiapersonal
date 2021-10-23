@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "apexcharts": "^3.29.0",
     "core-js": "^3.6.5",
-    "quasar": "^2.0.0"
+    "quasar": "^2.0.0",
+    "vue3-apexcharts": "^1.4.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",

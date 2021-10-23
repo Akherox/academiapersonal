@@ -20,10 +20,30 @@
     </q-header>
     <q-btn color="green" label="⇦" to="/" class="q-my-sm" />
 
+<div class="q-pa-md">
+    <q-carousel height="160px"
+      animated
+      v-model="slide"
+      navigation
+      infinite
+      :autoplay="autoplay"
+      arrows
+      transition-prev="slide-right"
+      transition-next="slide-left"
+      @mouseenter="autoplay = false"
+      @mouseleave="autoplay = true"
+    >
+      <q-carousel-slide :name="1" img-src="https://cdn.quasar.dev/img/mountains.jpg" />
+      <q-carousel-slide :name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg" />
+      <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg" />
+      <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg" />
+    </q-carousel>
+  </div>
+  
 
 <q-list boredered separator >
       <q-item clickable v-ripple >
-        <q-avatar color="primary" text-color="white">
+        <q-avatar color="black" text-color="white">
             A
         </q-avatar>
         <q-item-section>  Serie Matutina</q-item-section>
@@ -32,8 +52,12 @@
         </q-item-section>
       </q-item>
 
+<div>
+  <apexchart width="500" type="bar" :options="options" :series="series"></apexchart>
+</div>
+
       <q-item clickable v-ripple >
-        <q-avatar color="primary" text-color="white">
+        <q-avatar color="black" text-color="white">
             B
         </q-avatar>
         <q-item-section class="center-justify">  Serie Diaria</q-item-section>
@@ -43,7 +67,7 @@
       </q-item>
 
       <q-item clickable v-ripple >
-        <q-avatar color="primary" text-color="white">
+        <q-avatar color="black" text-color="white">
             C
         </q-avatar>
         <q-item-section>  Serie Nocturna</q-item-section>
@@ -76,8 +100,20 @@
 </template>
 
 <script>
-// import { ref } from "vue";
+import { ref } from "vue";
 import AMenu from "components/AMenu";
+const options= ref({
+        chart: {
+          id: 'vuechart-example'
+        },
+        xaxis: {
+          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+        }
+      }) 
+const series= ref([{
+        name: 'series-1',
+        data: [30, 40, 45, 50, 49, 60, 70, 91]
+      }]) 
 
 export default {
   name: "Page Index",
@@ -89,7 +125,12 @@ export default {
       // columns,
       // rows,
       // value: 81
+      slide: ref(1),
+      autoplay: ref(true),
+      options,
+      series
     };
   },
 };
+
 </script>
