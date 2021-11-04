@@ -79,9 +79,7 @@
     </q-list>
     
     <div>
-      <apexchart
-        width="500"
-        type="bar"
+      <apexchart  
         :options="options"
         :series="series"
       ></apexchart>
@@ -113,19 +111,24 @@
 import { ref } from "vue";
 import AMenu from "components/AMenu";
 const options = ref({
-  chart: {
-    id: "vuechart-example",
+   chart: {
+    foreColor: '#fff',
+    height: 280,
+    type: "radialBar" ,
   },
-  xaxis: {
-    categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
+  plotOptions: {
+    radialBar: {
+      dataLabels: {
+        total: {
+          show: true,
+          label: 'TOTAL'
+        }
+      }
+    }
   },
+  labels: ['TEAM A', 'TEAM B', 'TEAM C', 'TEAM D']
 });
-const series = ref([
-  {
-    name: "series-1",
-    data: [30, 40, 45, 50, 49, 60, 70, 91],
-  },
-]);
+const series = ref([67, 84, 97, 61]);
 
 export default {
   name: "Page Index",
