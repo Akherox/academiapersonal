@@ -50,7 +50,7 @@
                 class="full-width glossy"
                 label="Fazer Login"
                 style="background: #11f500; color: black"
-                to="/home"
+                to="/"
               />
             </div>
           </div>

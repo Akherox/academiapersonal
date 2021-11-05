@@ -8,7 +8,7 @@
     <q-btn color="green" label="RecSenha1" to="/mailrecuperarsenha" class="q-my-md"/>
     <q-btn color="green" label="RecSenha2" to="/codigorecuperarsenha" class="q-my-md"/>
     <q-btn color="green" label="RecSenha3" to="/novasenha" class="q-my-md"/>
-    <q-btn color="green" label="Home" to="/home" class="q-my-md"/>
+    <q-btn color="green" label="Home" to="/" class="q-my-md"/>
     <q-btn color="green" label="SeriesExercicios" to="/serieexercicio" class="q-my-md"/>
     <q-btn color="black" label="TESTES" to="/testes" class="q-my-md"/>
     <q-btn color="green" label="PerfilUsuario" to="/perfilusuario" class="q-my-md"/>

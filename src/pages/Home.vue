@@ -20,15 +20,75 @@
     </q-header>
 
     <div class="q-pa-md">
-      <q-table
-        title="Exercícios de Hoje"
-        :rows="rows"
-        :columns="columns"
-        row-key="name"
-        :rows-per-page-options="[0]"
-      />
+      <q-carousel
+        height="160px"
+        animated
+        v-model="slide"
+        navigation
+        infinite
+        :autoplay="autoplay"
+        arrows
+        transition-prev="slide-right"
+        transition-next="slide-left"
+        @mouseenter="autoplay = false"
+        @mouseleave="autoplay = true"
+      >
+        <q-carousel-slide
+          :name="1"
+          img-src="https://cdn.quasar.dev/img/mountains.jpg"
+        />
+        <q-carousel-slide
+          :name="2"
+          img-src="https://cdn.quasar.dev/img/parallax1.jpg"
+        />
+        <q-carousel-slide
+          :name="3"
+          img-src="https://cdn.quasar.dev/img/parallax2.jpg"
+        />
+        <q-carousel-slide
+          :name="4"
+          img-src="https://cdn.quasar.dev/img/quasar.jpg"
+        />
+      </q-carousel>
     </div>
-    <q-circular-progress
+
+    <q-list boredered separator>
+      <q-item clickable v-ripple>
+        <q-avatar color="black" text-color="white"> A </q-avatar>
+        <q-item-section> Serie Matutina</q-item-section>
+        <q-item-section avatar>
+          <q-icon color="primary" name="send" />
+        </q-item-section>
+      </q-item>
+
+      <q-item clickable v-ripple>
+        <q-avatar color="black" text-color="white"> B </q-avatar>
+        <q-item-section class="center-justify"> Serie Diaria</q-item-section>
+        <q-item-section avatar>
+          <q-icon color="primary" name="send" />
+        </q-item-section>
+      </q-item>
+
+      <q-item clickable v-ripple>
+        <q-avatar color="black" text-color="white"> C </q-avatar>
+        <q-item-section> Serie Nocturna</q-item-section>
+        <q-item-section avatar>
+          <q-icon color="primary" name="send" />
+        </q-item-section>
+      </q-item>
+    </q-list>
+    
+    <div>
+      <apexchart  
+        :options="options"
+        :series="series"
+      ></apexchart>
+    </div>
+
+    <!-- <q-circular-progress
+    <q-item-section avatar>
+          <q-icon color="primary" name="send" />
+        </q-item-section>
       show-value
       font-size="12px"
       :value="value"
@@ -39,16 +99,10 @@
       class="q-ma-md"
     >
       {{ value }}%
-    </q-circular-progress>
-    <!--<q-linear-progress stripe rounded size="20px" color="red" class="q-mt-sm" />
-      <q-btn
-      class="full-width"
-      label="Rotina Semanal"
-      style="background: #11f500; color: black"
-      />
-      -->
+    </q-circular-progress> -->
+
     <q-footer>
-        <a-menu />
+      <a-menu />
     </q-footer>
   </q-page>
 </template>
@@ -56,108 +110,40 @@
 <script>
 import { ref } from "vue";
 import AMenu from "components/AMenu";
-
-const columns = [
-  {
-    name: "name",
-    required: true,
-    label: "Descrição do Exercício",
-    align: "left",
-    field: (row) => row.name,
-    format: (val) => `${val}`,
-    //sortable: true
+const options = ref({
+   chart: {
+    foreColor: '#fff',
+    height: 280,
+    type: "radialBar" ,
   },
-  { name: "videos", align: "left", label: "Exemplos", field: "videos" },
-  { name: "series", align: "center", label: "Séries", field: "series" },
-  { name: "repetições", align: "center", label: "Repetições", field: "rep" },
-  { name: "carga", align: "center", label: "Carga", field: "carga" },
-  {
-    name: "intervalo",
-    align: "center",
-    label: "Intervalo",
-    field: "intervalo",
+  plotOptions: {
+    radialBar: {
+      dataLabels: {
+        total: {
+          show: true,
+          label: 'TOTAL'
+        }
+      }
+    }
   },
-  { name: "checkbox", align: "center", label: "Checkbox", field: "checkbox" },
-];
-
-const rows = [
-  {
-    //videos: src='https://cdn.quasar.dev/img/boy-avatar.png',
-    name: "Supino Máquina",
-    series: "2 - 3",
-    rep: "10 - 15",
-    carga: "Leve - Moderada",
-    intervalo: "60 Seg",
-    checkbox: "Concluído",
-  },
-  {
-    name: "Leg Press Horizontal",
-    series: "2 - 3",
-    rep: "10 - 15",
-    carga: "Leve - Moderada",
-    intervalo: "60 Seg",
-    checkbox: "Concluído",
-  },
-  {
-    name: "Puxada Alta",
-    series: "2 - 3",
-    rep: "10 - 15",
-    carga: "Leve - Moderada",
-    intervalo: "60 Seg",
-    checkbox: "Concluído",
-  },
-  {
-    name: "Mesa Flexora",
-    series: "2 - 3",
-    rep: "10 - 15",
-    carga: "Leve - Moderada",
-    intervalo: "60 Seg",
-    checkbox: "Concluído",
-  },
-  {
-    name: "Abdominal",
-    series: "2 - 3",
-    rep: "10 - 15",
-    carga: "Leve - Moderada",
-    intervalo: "60 Seg",
-    checkbox: "Concluído",
-  },
-  {
-    name: "Extenção de Quadril",
-    series: "2 - 3",
-    rep: "10 - 15",
-    carga: "Leve - Moderada",
-    intervalo: "60 Seg",
-    checkbox: "Concluído",
-  },
-  {
-    name: "Rosca Bícipes",
-    series: "2 - 3",
-    rep: "10 - 15",
-    carga: "Leve - Moderada",
-    intervalo: "60 Seg",
-    checkbox: "Concluído",
-  },
-  {
-    name: "Trícipes Polia",
-    series: "2 - 3",
-    rep: "10 - 15",
-    carga: "Leve - Moderada",
-    intervalo: "60 Seg",
-    checkbox: "Concluído",
-  },
-];
+  labels: ['TEAM A', 'TEAM B', 'TEAM C', 'TEAM D']
+});
+const series = ref([67, 84, 97, 61]);
 
 export default {
   name: "Page Index",
   components: {
-    AMenu
+    AMenu,
   },
   setup() {
     return {
-      columns,
-      rows,
-      value: 81
+      // columns,
+      // rows,
+      // value: 81
+      slide: ref(1),
+      autoplay: ref(true),
+      options,
+      series,
     };
   },
 };
