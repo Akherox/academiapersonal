@@ -57,7 +57,30 @@
         <q-avatar color="black" text-color="white"> A </q-avatar>
         <q-item-section> Serie Matutina</q-item-section>
         <q-item-section avatar>
-          <q-icon color="primary" name="send" />
+          <q-btn flat round dense icon="send">
+          <q-menu transition-show="flip-right" transition-hide="flip-left">
+            <q-list style="min-width: 100px">
+              <q-item clickable to="/perfilusuario">
+              <q-checkbox><q-item-section>Exercicio 1</q-item-section></q-checkbox>               
+              </q-item>
+              <q-item clickable to="/">
+                <q-checkbox><q-item-section>Exercicio 2</q-item-section></q-checkbox>  
+              </q-item>
+              <q-item clickable to="/perfilusuario">
+                <q-checkbox><q-item-section>Exercicio 3</q-item-section></q-checkbox>  
+              </q-item>
+              <q-item clickable to="/">
+                <q-checkbox><q-item-section>Exercicio 4</q-item-section></q-checkbox>  
+              </q-item>
+              <q-item clickable to="/perfilusuario">
+                <q-checkbox><q-item-section>Exercicio 5</q-item-section></q-checkbox>  
+              </q-item>
+              <q-item clickable to="/">
+                <q-checkbox><q-item-section>Exercicio 6</q-item-section></q-checkbox>  
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
         </q-item-section>
       </q-item>
 
@@ -65,7 +88,30 @@
         <q-avatar color="black" text-color="white"> B </q-avatar>
         <q-item-section class="center-justify"> Serie Diaria</q-item-section>
         <q-item-section avatar>
-          <q-icon color="primary" name="send" />
+          <q-btn flat round dense icon="send">
+          <q-menu transition-show="flip-right" transition-hide="flip-left">
+            <q-list style="min-width: 100px">
+              <q-item clickable to="/perfilusuario">
+              <q-checkbox><q-item-section>Exercicio 1</q-item-section></q-checkbox>               
+              </q-item>
+              <q-item clickable to="/">
+                <q-checkbox><q-item-section>Exercicio 2</q-item-section></q-checkbox>  
+              </q-item>
+              <q-item clickable to="/perfilusuario">
+                <q-checkbox><q-item-section>Exercicio 3</q-item-section></q-checkbox>  
+              </q-item>
+              <q-item clickable to="/">
+                <q-checkbox><q-item-section>Exercicio 4</q-item-section></q-checkbox>  
+              </q-item>
+              <q-item clickable to="/perfilusuario">
+                <q-checkbox><q-item-section>Exercicio 5</q-item-section></q-checkbox>  
+              </q-item>
+              <q-item clickable to="/">
+                <q-checkbox><q-item-section>Exercicio 6</q-item-section></q-checkbox>  
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
         </q-item-section>
       </q-item>
 
@@ -73,7 +119,30 @@
         <q-avatar color="black" text-color="white"> C </q-avatar>
         <q-item-section> Serie Nocturna</q-item-section>
         <q-item-section avatar>
-          <q-icon color="primary" name="send" />
+          <q-btn flat round dense icon="send">
+          <q-menu transition-show="flip-right" transition-hide="flip-left">
+            <q-list style="min-width: 100px">
+              <q-item clickable to="/perfilusuario">
+              <q-checkbox><q-item-section>Exercicio 1</q-item-section></q-checkbox>               
+              </q-item>
+              <q-item clickable to="/">
+                <q-checkbox><q-item-section>Exercicio 2</q-item-section></q-checkbox>  
+              </q-item>
+              <q-item clickable to="/perfilusuario">
+                <q-checkbox><q-item-section>Exercicio 3</q-item-section></q-checkbox>  
+              </q-item>
+              <q-item clickable to="/">
+                <q-checkbox><q-item-section>Exercicio 4</q-item-section></q-checkbox>  
+              </q-item>
+              <q-item clickable to="/perfilusuario">
+                <q-checkbox><q-item-section>Exercicio 5</q-item-section></q-checkbox>  
+              </q-item>
+              <q-item clickable to="/">
+                <q-checkbox><q-item-section>Exercicio 6</q-item-section></q-checkbox>  
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
         </q-item-section>
       </q-item>
     </q-list>
