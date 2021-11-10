@@ -36,11 +36,13 @@
         </q-btn>
       </q-toolbar>
     </q-header>
+
+
     <h3>Perfil</h3>
     <q-item>
       <q-item-section>
-        <q-avatar rounded size="100px"
-          ><img src="https://cdn.quasar.dev/img/boy-avatar.png"
+        <q-avatar rounded size="100px">
+          <img src="https://cdn.quasar.dev/img/boy-avatar.png"
         /></q-avatar>
       </q-item-section>
     </q-item>
@@ -89,9 +91,7 @@
           />
         </q-avatar>
         <q-item-label>OBJETIVO</q-item-label>
-        <q-item-label caption lines="2"
-          >Hipertofia Muscular/Cardio</q-item-label
-        >
+        <q-item-label caption lines="2">Hipertofia Muscular/Cardio</q-item-label>
       </q-item-section>
     </q-item>
     <q-separator spaced inset />
@@ -115,6 +115,7 @@
     </q-item>
     <q-footer>
       <a-menu />
+
     </q-footer>
   </q-page>
 </template>
