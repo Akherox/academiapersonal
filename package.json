@@ -16,7 +16,7 @@
     "global": "^4.4.0",
     "quasar": "^2.2.4",
     "vue3-apexcharts": "^1.4.1",
-    "vuex": "^3.6.2"
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",
