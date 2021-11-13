@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="q-pa-md q-gutter-md">
-      <h8>Defina sua nova senha.</h8>
+      <h6>Defina sua nova senha.</h6>
     </div>
     <q-form class="q-pa-md q-gutter-md">
       <q-input filled v-model="text" label="Senha" />

@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="q-pa-md q-gutter-md">
-      <h8>Enviaremos um PIN para seu e-mail, troque sua senha.</h8>
+      <h6>Enviaremos um PIN para seu e-mail, troque sua senha.</h6>
     </div>
     <q-form class="q-pa-md q-gutter-md">
       <q-input filled v-model="text" label="E-mail" />

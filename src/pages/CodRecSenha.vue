@@ -21,13 +21,13 @@
       </div>
     </div>
     <div class="q-pa-sm q-gutter-md text-center">
-      <h8>Insira seu código enviado para</h8>
+      <h6>Insira seu código enviado para</h6>
     </div>
     <div
       class="q-pa-md q-gutter-md text-center"
       style="font-size: 0.9rem; color: #11f500"
     >
-      <h8>exemplonatela@gmail.com</h8>
+      <h6>exemplonatela@gmail.com</h6>
     </div>
 
     <q-form class="q-pa-sm q-gutter-md">
@@ -60,7 +60,7 @@
       class="q-pa-md q-gutter-md text-center"
       style="font-size: 0.9rem; color: #11f500"
     >
-      <h8>Eu não recebí um código</h8>
+      <h6>Eu não recebí um código</h6>
     </div>
   </q-page>
 </template>

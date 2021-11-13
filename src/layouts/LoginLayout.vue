@@ -15,12 +15,7 @@
 
 <script>
 export default {
-  name: "MainLayout",
-  mounted() {
-    this.$store.dispatch("usuario/carregarToken").catch((error) => {
-      this.$router.push("/login");
-    });
-  },
+  name: "LoginLayout"
 };
 </script>
 <style scoped>
