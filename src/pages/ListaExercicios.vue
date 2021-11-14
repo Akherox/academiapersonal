@@ -2,8 +2,8 @@
   <q-page padding>
     <q-header>
       <q-toolbar style="color: black">
-        <q-btn flat round dense icon="arrow_back_ios_new" to="/home" />
-        <q-toolbar-title class="text-center">EXERCICIOS</q-toolbar-title>
+        <q-btn flat round dense icon="arrow_back_ios_new" to="/menu" />
+        <q-toolbar-title></q-toolbar-title>
         <q-btn flat round dense icon="fas fa-user-circle" to="/perfilusuario" />
       </q-toolbar>
     </q-header>

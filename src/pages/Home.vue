@@ -2,6 +2,7 @@
   <q-page padding>
     <q-header>
       <q-toolbar style="color: black">
+        <q-btn flat round dense icon="arrow_back_ios_new" to="/menu" />
         <q-toolbar-title class="text-center">Exercicios do Dia</q-toolbar-title>
         <q-btn flat round dense icon="fas fa-user-circle">
           <q-menu transition-show="flip-right" transition-hide="flip-left">
