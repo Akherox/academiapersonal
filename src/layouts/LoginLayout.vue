@@ -1,5 +1,5 @@
 <template>
-  <q-layout class="fundo" view="lHh Lpr lFf">
+  <q-layout class="fondo" view="lHh Lpr lFf">
     <!-- <q-header elevated>
       <q-toolbar>
         <q-toolbar-title> Academia Personal </q-toolbar-title>
@@ -19,8 +19,8 @@ export default {
 };
 </script>
 <style scoped>
-.fundo {
-  background: url(~assets/Fondo.png) top center no-repeat;
+.fondo {
+  background: url(~assets/Fondo-Mulher.png) top center no-repeat;
   background-size: cover;
 }
 </style>

@@ -17,12 +17,12 @@ const routes = [
     path: 'usuario',
     component: () => import('layouts/LoginLayout.vue'),
     children: [
-      { path: 'login', component: () => import('pages/Login.vue')},
-      { path: 'cadastro', component: () => import('pages/Cadastro.vue')},
-      { path: 'cadastrosucesso', component: () => import('pages/CadastroSucesso.vue')},
-      { path: 'mailrecuperarsenha', component:	() => import('pages/MailRecSenha.vue')},
-      { path: 'codigorecuperarsenha', component: () => import('pages/CodRecSenha.vue')},
-      { path: 'novasenha', component: () => import('pages/NovaSenha.vue')},
+      { path: 'usuario/login', component: () => import('pages/Login.vue')},
+      { path: 'usuario/cadastro', component: () => import('pages/Cadastro.vue')},
+      { path: 'usuario/cadastrosucesso', component: () => import('pages/CadastroSucesso.vue')},
+      { path: 'usuario/mailrecuperarsenha', component:	() => import('pages/MailRecSenha.vue')},
+      { path: 'usuario/codigorecuperarsenha', component: () => import('pages/CodRecSenha.vue')},
+      { path: 'usuario/novasenha', component: () => import('pages/NovaSenha.vue')},
     ]
   },
 
