@@ -4,7 +4,7 @@
       <q-toolbar style="color: black">
         <q-btn flat round dense icon="arrow_back_ios_new" to="/home" />
         <q-toolbar-title class="text-center">EXERCICIOS</q-toolbar-title>
-        <q-btn flat round dense icon="fas fa-user-circle" to="/perfilusuario" />
+        <q-btn flat round dense icon="fas fa-user-circle" to="/perfil" />
       </q-toolbar>
     </q-header>
     <!-- <q-list bordered separator>

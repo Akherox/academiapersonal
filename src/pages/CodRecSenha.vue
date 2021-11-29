@@ -14,7 +14,7 @@
       <q-btn
         icon="far fa-arrow-alt-circle-left"
         style="font-size: 1.5rem; color: #11f500"
-        to="/"
+        to="/senha/nova"
       ></q-btn>
       <div class="q-gutter-sm" style="font-size: 3rem; color: #11f500">
         <h5>Esqueci minha senha</h5>
@@ -52,7 +52,7 @@
           class="col-12 glossy"
           label="Continuar"
           style="background: #11f500; color: black"
-          to="/novasenha"
+          to="/senha/nova"
         />
       </div>
     </q-form>

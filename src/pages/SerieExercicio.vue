@@ -4,7 +4,7 @@
       <q-toolbar style="color: black">
         <q-btn flat round dense icon="arrow_back_ios_new" to="/" />
         <q-toolbar-title></q-toolbar-title>
-        <q-btn flat round dense icon="fas fa-user-circle" to="/perfilusuario" />
+        <q-btn flat round dense icon="fas fa-user-circle" to="/perfil" />
       </q-toolbar>
     </q-header>
     <q-btn color="green" label="⇦" to="/" class="q-my-sm" />

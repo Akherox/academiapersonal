@@ -49,7 +49,7 @@
           class="col-12 glossy"
           label="Confirmar"
           style="background: #11f500; color: black"
-          to="/cadastrosucesso"
+          to="/cadastro/sucesso"
         />
       </div>
     </q-form>

@@ -7,7 +7,7 @@
         <q-btn flat round dense icon="fas fa-user-circle">
           <q-menu transition-show="flip-right" transition-hide="flip-left">
             <q-list style="min-width: 100px">
-              <q-item clickable to="/perfilusuario">
+              <q-item clickable to="/perfil">
                 <q-item-section>Meu Perfil</q-item-section>
               </q-item>
               <q-separator />

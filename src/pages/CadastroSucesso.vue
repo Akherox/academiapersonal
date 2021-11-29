@@ -19,7 +19,7 @@
           class="col-12 glossy"
           label="Criar Perfil"
           style="background: #11f500; color: black"
-          to="/criarperfil"
+          to="/cadastro/perfil"
         />
       </div>
     </div>

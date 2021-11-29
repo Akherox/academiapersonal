@@ -31,7 +31,7 @@
           class="col-12 glossy"
           label="Enviar para e-mail"
           style="background: #11f500; color: black"
-          to="/codigorecuperarsenha"
+          to="/senha/codigo"
         />
       </div>
     </q-form>
