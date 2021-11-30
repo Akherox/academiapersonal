@@ -12,10 +12,12 @@
   "dependencies": {
     "@quasar/extras": "^1.11.4",
     "apexcharts": "^3.29.0",
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
     "global": "^4.4.0",
     "quasar": "^2.2.4",
-    "vue3-apexcharts": "^1.4.1"
+    "vue3-apexcharts": "^1.4.1",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",

@@ -5,18 +5,34 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Home.vue')},
-      { path: 'login', component: () => import('pages/Login.vue')},
-      { path: 'cadastro', component: () => import('pages/Cadastro.vue')},
-      { path: 'cadastrosucesso', component: () => import('pages/CadastroSucesso.vue')},
-      { path: 'criarperfil', component: () => import('pages/CriarPerfil.vue')},
-      { path: 'listaexercicios', component: () => import('pages/ListaExercicios.vue')},
-      { path: 'mailrecuperarsenha', component:	() => import('pages/MailRecSenha.vue')},
-      { path: 'codigorecuperarsenha', component: () => import('pages/CodRecSenha.vue')},
-      { path: 'novasenha', component: () => import('pages/NovaSenha.vue')},
-      { path: 'perfilusuario', component: () => import('pages/PerfilUsuario.vue')},
-      { path: 'menu', component: () => import('pages/Index.vue')},
-      { path: 'serieexercicio', component: () => import('pages/SerieExercicio.vue')},
-      { path: 'testes', component: () => import('pages/TESTES.vue')}
+      { path: 'exercicios', component: () => import('pages/ListaExercicios.vue')},
+      { path: 'exercicios/serie', component: () => import('pages/SerieExercicio.vue')},
+      { path: 'perfil', component: () => import('pages/PerfilUsuario.vue')},
+    ]
+  },
+  {
+    path: '/login',
+    component: () => import('layouts/LoginLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Login.vue')},
+    ]
+  },
+  {
+    path: '/senha',
+    component: () => import('layouts/LoginLayout.vue'),
+    children: [
+      { path: 'recuperar', component:	() => import('pages/MailRecSenha.vue')},
+      { path: 'codigo', component: () => import('pages/CodRecSenha.vue')},
+      { path: 'nova', component: () => import('pages/NovaSenha.vue')},
+    ]
+  },
+  {
+    path: '/cadastro',
+    component: () => import('layouts/LoginLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Cadastro.vue')},
+      { path: 'sucesso', component: () => import('pages/CadastroSucesso.vue')},
+      { path: 'perfil', component: () => import('pages/CriarPerfil.vue')},
     ]
   },
 

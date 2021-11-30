@@ -67,7 +67,7 @@
                 class="full-width glossy flex justify-center"
                 label="Esqueci a Senha"
                 style="color: white"
-                to="/mailrecuperarsenha"
+                to="/senha/recuperar"
               />
             </div>
             <div class="col">

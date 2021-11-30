@@ -1,5 +1,5 @@
 <template>
-  <q-layout class="fundo" view="lHh Lpr lFf">
+  <q-layout class="fondo" view="lHh Lpr lFf">
     <!-- <q-header elevated>
       <q-toolbar>
         <q-toolbar-title> Academia Personal </q-toolbar-title>
@@ -15,17 +15,12 @@
 
 <script>
 export default {
-  name: "MainLayout",
-  mounted() {
-    this.$store.dispatch("usuario/carregarToken").catch((error) => {
-      this.$router.push("/login");
-    });
-  },
+  name: "LoginLayout"
 };
 </script>
 <style scoped>
-.fundo {
-  background: url(~assets/Fondo.png) top center no-repeat;
+.fondo {
+  background: url(~assets/Fondo-Mulher.png) top center no-repeat;
   background-size: cover;
 }
 </style>

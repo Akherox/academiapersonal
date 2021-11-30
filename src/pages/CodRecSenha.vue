@@ -17,19 +17,24 @@
           />
         </div>
       </div>
-      
+      <q-btn
+        icon="far fa-arrow-alt-circle-left"
+        style="font-size: 1.5rem; color: #11f500"
+        to="/senha/nova"
+      ></q-btn>
+
       <div class="q-gutter-sm" style="font-size: 3rem; color: #11f500">
         <h5>Esqueci minha senha</h5>
       </div>
     </div>
     <div class="q-pa-sm q-gutter-md text-center">
-      <h8>Insira seu código enviado para</h8>
+      <h6>Insira seu código enviado para</h6>
     </div>
     <div
       class="q-pa-md q-gutter-md text-center"
       style="font-size: 0.9rem; color: #11f500"
     >
-      <h8>exemplonatela@gmail.com</h8>
+      <h6>exemplonatela@gmail.com</h6>
     </div>
 
     <q-form class="q-pa-sm q-gutter-md">
@@ -54,7 +59,7 @@
           class="col-12 glossy"
           label="Continuar"
           style="background: #11f500; color: black"
-          to="/novasenha"
+          to="/senha/nova"
         />
       </div>
     </q-form>
@@ -62,7 +67,7 @@
       class="q-pa-md q-gutter-md text-center"
       style="font-size: 0.9rem; color: #11f500"
     >
-      <h8>Eu não recebí um código</h8>
+      <h6>Eu não recebí um código</h6>
     </div>
   </q-page>
 </template>

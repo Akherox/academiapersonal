@@ -2,9 +2,9 @@
   <q-page padding>
     <q-header>
       <q-toolbar style="color: black">
-        <q-btn flat round dense icon="arrow_back_ios_new" to="/menu" />
-        <q-toolbar-title></q-toolbar-title>
-        <q-btn flat round dense icon="fas fa-user-circle" to="/perfilusuario" />
+        <q-btn flat round dense icon="arrow_back_ios_new" to="/home" />
+        <q-toolbar-title class="text-center"></q-toolbar-title>
+        <q-btn flat round dense icon="fas fa-user-circle" to="/perfil" />
       </q-toolbar>
     </q-header>
     <!-- <q-list bordered separator>
@@ -26,6 +26,20 @@
         </template>
       </q-input>
     </div>
+    ------------------------------ Combinar com o computed de abaixo e mounted 
+      <!-- <q-item v-for="game in games" :key="game.id" :to="`/games/${game.id}`">
+        <q-item-section>
+          <q-item-label>{{ game.nome }}</q-item-label>
+          <q-item-label caption>{{ game.categoria.nome }}</q-item-label>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>Horas: {{ game.horasJogadas }}</q-item-label>
+        </q-item-section>
+        <q-item-section>
+          <q-item-label v-if="game.concluido">Concluido</q-item-label>
+        </q-item-section>
+      </q-item> -->
+    ------------------------------
     <!-- <q-list bordered separator>
       <q-item v-for="item in itens" :key="item.exercicio">
 
@@ -144,7 +158,16 @@ export default {
         },
       ],
     };
-  }
+  },
+  // computed: {
+  //   games () {
+  //     return this.$store.state.treinos.treinos;
+  //   }
+  // },
+  // mounted () {
+  //   this.$store.dispatch("treinos/listar");
+  //   this.$store.dispatch("treinos/listarCategorias");
+  // }
 };
 </script>
 

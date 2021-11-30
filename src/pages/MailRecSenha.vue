@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="q-pa-md q-gutter-md">
-      <h8>Enviaremos um PIN para seu e-mail, troque sua senha.</h8>
+      <h6>Enviaremos um PIN para seu e-mail, troque sua senha.</h6>
     </div>
     <q-form class="q-pa-md q-gutter-md">
       <q-input filled v-model="text" label="E-mail" />
@@ -33,7 +33,7 @@
           class="col-12 glossy"
           label="Enviar para e-mail"
           style="background: #11f500; color: black"
-          to="/codigorecuperarsenha"
+          to="/senha/codigo"
         />
       </div>
     </q-form>
