@@ -1,11 +1,5 @@
 <template>
   <q-page padding>
-    <q-header>
-      <q-toolbar style="color: black">
-        <q-btn flat round dense icon="arrow_back_ios_new" to="/menu" />
-        <q-toolbar-title></q-toolbar-title>
-      </q-toolbar>
-    </q-header>
     <div class="q-pa-md q-gutter-md">
       <div class="text-center">
         <h3></h3>

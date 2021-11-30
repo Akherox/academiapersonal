@@ -1,12 +1,5 @@
 <template>
   <q-page padding>
-    <q-header>
-      <q-toolbar style="color: black">
-        <q-btn flat round dense icon="arrow_back_ios_new" to="/" />
-        <q-toolbar-title></q-toolbar-title>
-        
-      </q-toolbar>
-    </q-header>
     <div class="q-pa-md q-gutter-md text-center">
       <q-icon name="account_circle" style="font-size: 10rem; color: #11f500" />
     </div>

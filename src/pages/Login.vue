@@ -1,12 +1,5 @@
 <template>
   <q-page padding class="center" style="max-width: 600px">
-    <q-header>
-      <q-toolbar style="color: black">
-        <q-btn flat round dense icon="arrow_back_ios_new" to="/menu" />
-        <q-toolbar-title></q-toolbar-title>
-      </q-toolbar>
-    </q-header>
-   <!-- <q-btn color="green" label="⇦" to="/" class="q-my-sm" />-->
     <q-form class="q-pa-md q-gutter-md" style="max-width: 600px">
       <h3></h3>
       <div class="flex justify-center">
