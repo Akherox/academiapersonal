@@ -32,17 +32,14 @@
           />
         </template>
       </q-input>
-
-      <div class="q-pa-sm">
-        <q-checkbox
-          v-model="right"
-          label="Mater-me logado"
-          style="color: white"
-        />
-      </div>
-
-      <div class="row">
-        <div class="col q-col-gutter-y-md">
+    
+        <div class="q-pa-sm">
+        
+          <q-checkbox v-model="right" label="Manter-me logado" style="color: white" />
+        </div>
+        
+         <div class="row">
+            <div class="col q-col-gutter-y-md">
           <div class="row">
             <div class="col">
               <q-btn push

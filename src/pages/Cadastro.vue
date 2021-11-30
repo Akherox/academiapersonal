@@ -18,15 +18,10 @@
         suffix="@gmail.com"
       >
         <template v-slot:prepend>
-          <q-icon name="mail" />
+         
         </template>
       </q-input>
-      <q-input
-        v-model="password"
-        filled
-        :type="isPwd ? 'password' : 'text'"
-        hint="Crie uma Senha"
-      >
+    <q-input v-model="password" filled :type="isPwd ? 'password' : text " hint="Crie uma Senha ">
         <template v-slot:append>
           <q-icon
             :name="isPwd ? 'visibility_off' : 'visibility'"
@@ -35,23 +30,14 @@
           />
         </template>
       </q-input>
-
-      <div class="q-pa-sm">
-        <q-checkbox
-          v-model="right"
-          label="Mater-me logado"
-          style="color: white"
-        />
-      </div>
-      <div class="row">
-        <q-btn push
-          class="col-12 glossy"
-          label="Confirmar"
-          style="background: #11f500; color: black"
-          to="/cadastro/sucesso"
-        />
-      </div>
-    </q-form>
+    
+        <div class="q-pa-sm">
+          <q-checkbox v-model="right" label="Manter-me logado" style="color:white"/>
+        </div>
+          <div class="row">
+          <q-btn class="col-12" label="Confirmar" style="background: #11F500; color: black" />
+    </div>
+  </q-form>
   </q-page>
 </template>
 
