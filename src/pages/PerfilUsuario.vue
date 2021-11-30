@@ -65,7 +65,7 @@
           <q-input
             filled
             v-model="Sobrenome"
-            label="Seu Sobrenome"
+            label="Seu sobrenome"
             hint="Digite seu Sobrenome"
             lazy-rules
             :rules="[(val) => (val && val.length > 0) || 'Campo obrigatorio']"
@@ -220,6 +220,11 @@ export default {
   setup() {
     const name = ref(null);
     const date = ref(null);
+    const Sobrenome = ref(null);
+    const sexo = ref(null);
+    const objetivo = ref(null);
+
+
     const accept = ref(false);
     const $q = useQuasar();
 
@@ -232,9 +237,9 @@ export default {
       name,
       accept,
       date,
-      Sobrenome: ref(""),
-      sexo: ref(""),
-      objetivo: ref(""),
+      Sobrenome,
+      sexo,
+      objetivo,
 
      onSubmit() {
     if (accept.value !== true) {
@@ -256,6 +261,9 @@ export default {
   onReset() {
     name.value = null;
     date.value = null;
+    Sobrenome.value = null;
+    sexo.value = null;
+    objetivo.value = null;
     accept.value = false;
   },
 
