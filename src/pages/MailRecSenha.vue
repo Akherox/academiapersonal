@@ -1,5 +1,11 @@
 <template>
   <q-page padding>
+    <q-header>
+      <q-toolbar style="color: black">
+        <q-btn flat round dense icon="arrow_back_ios_new" to="/menu" />
+        <q-toolbar-title></q-toolbar-title>
+      </q-toolbar>
+    </q-header>
     <div class="q-pa-md q-gutter-md">
       <div class="text-center">
         <h3></h3>
@@ -11,17 +17,13 @@
           />
         </div>
       </div>
-      <q-btn
-        icon="far fa-arrow-alt-circle-left"
-        style="font-size: 1.5rem; color: #11f500"
-        to="/"
-      ></q-btn>
+      
       <div class="q-gutter-sm" style="font-size: 3rem; color: #11f500">
         <h5>Esqueci minha senha</h5>
       </div>
     </div>
     <div class="q-pa-md q-gutter-md">
-      <h8>Enviaremos um PIN para seu e-mail, troque sua senha.</h8>
+      <h6>Enviaremos um PIN para seu e-mail, troque sua senha.</h6>
     </div>
     <q-form class="q-pa-md q-gutter-md">
       <q-input filled v-model="text" label="E-mail" />
@@ -31,7 +33,7 @@
           class="col-12 glossy"
           label="Enviar para e-mail"
           style="background: #11f500; color: black"
-          to="/codigorecuperarsenha"
+          to="/senha/codigo"
         />
       </div>
     </q-form>

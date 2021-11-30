@@ -1,6 +1,11 @@
 <template>
   <q-page padding class="flex justify-center">
-    
+    <q-header>
+      <q-toolbar style="color: black">
+        <q-btn flat round dense icon="arrow_back_ios_new" to="/menu" />
+        <q-toolbar-title></q-toolbar-title>
+      </q-toolbar>
+    </q-header>
     <q-form class="q-pa-md q-gutter-md" style="max-width: 500px">
       <h3></h3>
       <div class="flex justify-center">
@@ -49,7 +54,7 @@
           class="col-12 glossy"
           label="Confirmar"
           style="background: #11f500; color: black"
-          to="/cadastrosucesso"
+          to="/cadastro/sucesso"
         />
       </div>
     </q-form>

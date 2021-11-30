@@ -2,9 +2,9 @@
   <q-page padding>
     <q-header>
       <q-toolbar style="color: black">
-        <q-btn flat round dense icon="arrow_back_ios_new" to="/" />
+        <q-btn flat round dense icon="arrow_back_ios_new" to="/menu" />
         <q-toolbar-title></q-toolbar-title>
-        <q-btn flat round dense icon="settings" to="/dadosperfil">
+        <q-btn flat round dense icon="settings">
           <q-menu>
             <div class="row no-wrap q-pa-md">
               <div class="column">
