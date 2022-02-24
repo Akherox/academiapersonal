@@ -2,6 +2,20 @@
 
 A Quasar Framework app
 
+
+## Install Quasar CLI
+https://quasar.dev/quasar-cli/installation
+```bash
+yarn global add @quasar/cli
+```
+Adicionar variavel de ambiente PATH buscador Windows
+```bash
+%LOCALAPPDATA%\yarn\bin
+```
+```bash
+%APPDATA%\npm
+```
+
 ## Install the dependencies
 ```bash
 yarn
@@ -24,3 +38,4 @@ quasar build
 
 ### Customize the configuration
 See [Configuring quasar.conf.js](https://v2.quasar.dev/quasar-cli/quasar-conf-js).
+
