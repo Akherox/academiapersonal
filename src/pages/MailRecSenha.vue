@@ -23,7 +23,7 @@
       <q-input filled v-model="text" label="E-mail" />
       <q-input filled v-model="text" label="Confirmar e-mail" />
       <div class="row">
-        <q-btn push
+        <a-btn push
           class="col-12 glossy"
           label="Enviar para e-mail"
           style="background: #11f500; color: black"
@@ -36,8 +36,13 @@
 
 <script>
 import { ref } from "vue";
+import ABtn from "components/ABtn"
 
 export default {
+  components: {
+    ABtn,
+  },
+
   setup() {
     return {
       text: ref(""),

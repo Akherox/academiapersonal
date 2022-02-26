@@ -5,8 +5,8 @@ export function someAction (context) {
 import { api } from "boot/axios";
 const storage = window.localStorage;
 
-export function logar({ commit, dispatch }, { username, password }) {
-    return api.post("/usuarios/login/", { username, password }).then(r => {
+export function logar({ commit, dispatch }, { email, senha }) {
+    return api.post("/usuarios/login/", { email, senha }).then(r => {
       commit("setToken", r.data.token);
       storage.setItem("token", r.data.token);
   

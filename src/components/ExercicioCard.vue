@@ -6,7 +6,7 @@
     >
       <q-card-section horizontal class="q-pt-xs">
         <q-card-section class="col-6">
-          <q-video :src="exercicio.videoUrl" />
+          <q-video :src="exercicio.video" />
         </q-card-section>
         <q-card-actions vertical class="justify-around q-px-md">
           <q-item-section>

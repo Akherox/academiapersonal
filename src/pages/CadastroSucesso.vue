@@ -15,7 +15,7 @@
     </div>
     <div class="q-pa-md">
       <div class="row">
-        <q-btn push
+        <a-btn push
           class="col-12 glossy"
           label="Criar Perfil"
           style="background: #11f500; color: black"
@@ -27,7 +27,12 @@
 </template>
 
 <script>
+import ABtn from "components/ABtn"
+
 export default {
   // name: 'PageName',
+  components: {
+    ABtn, 
+  }
 };
 </script>

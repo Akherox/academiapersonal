@@ -1,6 +1,6 @@
 <template>
-  <q-page padding class="flex justify-center">
-    <q-form class="q-pa-md q-gutter-md" style="max-width: 500px">
+  <q-page padding class="center" style="max-width: 400px">
+    <q-form class="q-pa-md q-gutter-md" >
       <h3></h3>
       <div class="flex justify-center">
         <q-img
@@ -11,17 +11,14 @@
       </div>
 
       <q-input
-        standout
         v-model="email"
         type="email"
-        prefix="Digite seu Email:"
-        suffix="@gmail.com"
+        hint="Digite seu email"
+        filled
       >
-        <template v-slot:prepend>
-         
-        </template>
+
       </q-input>
-    <q-input v-model="password" filled :type="isPwd ? 'password' : text " hint="Crie uma Senha ">
+    <q-input v-model="password" filled :type="isPwd ? 'password' : text " hint="Crie uma Senha">
         <template v-slot:append>
           <q-icon
             :name="isPwd ? 'visibility_off' : 'visibility'"
@@ -35,7 +32,7 @@
           <q-checkbox v-model="right" label="Manter-me logado" style="color:white"/>
         </div>
           <div class="row">
-          <q-btn class="col-12" label="Confirmar" style="background: #11F500; color: black" />
+          <a-btn push class="col-12" label="Confirmar" style="background: #11F500; color: black"/>
     </div>
   </q-form>
   </q-page>
@@ -43,8 +40,12 @@
 
 <script>
 import { ref } from "vue";
+import ABtn from "components/ABtn.vue";
 
 export default {
+  components: {
+    ABtn,
+  },
   setup() {
     return {
       email: ref(""),

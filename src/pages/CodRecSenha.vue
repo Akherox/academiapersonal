@@ -49,7 +49,7 @@
         style="font-size: 5rem; color: #11f500"
       />
       <div class="row">
-        <q-btn push
+        <a-btn push
           class="col-12 glossy"
           label="Continuar"
           style="background: #11f500; color: black"
@@ -67,7 +67,12 @@
 </template>
 
 <script>
+import ABtn from "components/ABtn"
+
 export default {
   // name: 'PageName',
+  components:{
+    ABtn,
+  },
 };
 </script>

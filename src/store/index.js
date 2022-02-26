@@ -3,6 +3,7 @@ import { createStore } from 'vuex'
 
 import usuario from './usuario'
 import treino from './treino'
+import exercicio from './exercicio'
 
 // import example from './module-example'
 /*
@@ -19,7 +20,8 @@ export default store(function (/* { ssrContext } */) {
     modules: {
       // example
       usuario,
-      treino
+      treino,
+      exercicio
     },
 
     // enable strict mode (adds overhead!)

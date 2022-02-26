@@ -1,5 +1,5 @@
 <template>
-  <q-btn v-bind="$attrs" color="primary" text-color="black" class="full-width" push/>
+  <q-btn v-bind="$attrs" color="primary" text-color="black" class="full-width glossy" push/>
 </template>
 
 <script>

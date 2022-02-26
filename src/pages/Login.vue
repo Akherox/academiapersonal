@@ -1,6 +1,6 @@
 <template>
-  <q-page padding class="center" style="max-width: 600px">
-    <q-form class="q-pa-md q-gutter-md" style="max-width: 600px">
+  <q-page padding class="center" style="max-width: 400px">
+    <q-form class="q-pa-md q-gutter-md" @submit.prevent="entrar()">
       <h3></h3>
       <div class="flex justify-center">
         <q-img
@@ -10,12 +10,11 @@
         />
       </div>
       <q-input
-       filled
+        filled
         v-model="text"
         hint="Usuário"
         :dense="dense"
         style="color: white"
-        
       />
       <q-input
         v-model="password"
@@ -32,28 +31,31 @@
           />
         </template>
       </q-input>
-    
-        <div class="q-pa-sm">
-        
-          <q-checkbox v-model="right" label="Manter-me logado" style="color: white" />
-        </div>
-        
-         <div class="row">
-            <div class="col q-col-gutter-y-md">
+
+      <div class="q-pa-sm">
+        <q-checkbox
+          v-model="right"
+          label="Manter-me logado"
+          style="color: white"
+        />
+      </div>
+
+      <div class="row">
+        <div class="col q-col-gutter-y-md">
           <div class="row">
             <div class="col">
-              <q-btn push
+              <a-btn
+                type="submit"
                 class="full-width glossy"
                 label="Fazer Login"
-                style="background: #11f500; color: black"
-                to="/"
               />
             </div>
           </div>
 
           <div class="row q-col-gutter-md">
             <div class="col">
-              <q-btn push
+              <q-btn
+                push
                 class="full-width glossy flex justify-center"
                 label="Esqueci a Senha"
                 style="color: white"
@@ -61,7 +63,8 @@
               />
             </div>
             <div class="col">
-              <q-btn push
+              <q-btn
+                push
                 class="full-width glossy flex justify-center"
                 label="Cadastrar"
                 style="color: white"
@@ -76,18 +79,32 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import ABtn from "components/ABtn.vue";
+
 
 export default {
-  
-  setup() {
-    return {
-      password: ref(""),
-      isPwd: ref(true),
-      text: ref(""),
-      dense: ref(false),
-      right: ref(false),
-    };
+  components: {
+    ABtn,
   },
+
+  data () {
+    return {
+      password: '123',
+       isPwd: true,
+      text: 'usuario@email.com',
+      dense: false,
+      right: false,
+    }
+  },
+  methods: {    
+    entrar() {
+      this.$store.dispatch('usuario/logar', {
+        email: this.text,
+        senha: this.password,
+      }).then((r) => {
+       this.$router.push('/');
+      });
+    }
+  }
 };
 </script>

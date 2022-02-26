@@ -53,7 +53,7 @@
         type="textarea"
       />
       <div class="row">
-        <q-btn push
+        <a-btn push
           class="col-12 glossy"
           label="Prosseguir"
           style="background: #11f500; color: black"
@@ -66,8 +66,15 @@
 
 <script>
 import { ref } from "vue";
+import ABtn from "components/ABtn.vue"
 
+//this.$store.state.usuario.usuario
 export default {
+  components: {
+    ABtn,
+  },
+
+
   setup() {
     return {
       text: ref(""),

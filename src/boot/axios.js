@@ -5,6 +5,25 @@ import axios from 'axios'
 
 const api = axios.create({ baseURL: 'http://localhost:3000' })
 
+api.interceptors.response.use(
+  function(response) {
+    //handleDates(response.data);
+    return response;
+  },
+  function(error) {
+    if (error.response?.status == 401) {
+      // Notify.create({
+      //   type: "negative",
+      //   message: "É necessário efetuar o login"
+      // });
+      router.push("/login");
+      return Promise.reject(error);
+    }
+
+    return error;
+  }
+);
+
 export default boot(({ app }) => {
   // for use inside Vue files (Options API) through this.$axios and this.$api
 

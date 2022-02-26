@@ -8,7 +8,8 @@ const routes = [
       { path: 'exercicios', component: () => import('pages/ListaExercicios.vue')},
       { path: 'exercicios/serie', component: () => import('pages/SerieExercicio.vue')},
       { path: 'perfil', component: () => import('pages/PerfilUsuario.vue')},
-    ]
+    ],
+    meta: { requiresAuth: true }
   },
   {
     path: '/login',
