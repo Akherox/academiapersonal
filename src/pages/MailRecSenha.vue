@@ -23,10 +23,8 @@
       <q-input filled v-model="text" label="E-mail" />
       <q-input filled v-model="text" label="Confirmar e-mail" />
       <div class="row">
-        <a-btn push
-          class="col-12 glossy"
+        <a-btn
           label="Enviar para e-mail"
-          style="background: #11f500; color: black"
           to="/senha/codigo"
         />
       </div>

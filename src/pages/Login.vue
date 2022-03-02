@@ -40,19 +40,16 @@
         />
       </div>
 
-      <div class="row">
-        <div class="col q-col-gutter-y-md">
+      <div >
+        <div class="q-col-gutter-y-md">
           <div class="row">
-            <div class="col">
               <a-btn
                 type="submit"
-                class="full-width glossy"
                 label="Fazer Login"
               />
-            </div>
           </div>
 
-          <div class="row q-col-gutter-md">
+          <div class="row q-gutter-x-md">
             <div class="col">
               <q-btn
                 push

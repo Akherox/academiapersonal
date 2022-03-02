@@ -20,7 +20,7 @@ const routes = [
   },
   {
     path: '/senha',
-    component: () => import('layouts/LoginLayout.vue'),
+    component: () => import('layouts/SenhaLayout.vue'),
     children: [
       { path: 'recuperar', component:	() => import('pages/MailRecSenha.vue')},
       { path: 'codigo', component: () => import('pages/CodRecSenha.vue')},

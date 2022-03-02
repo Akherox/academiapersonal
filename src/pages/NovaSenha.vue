@@ -23,10 +23,8 @@
       <q-input filled v-model="text" label="Senha" />
       <q-input filled v-model="text" label="Confirmar senha" />
       <div class="row">
-        <a-btn push
-          class="col-12 glossy"
+        <a-btn 
           label="Alterar senha"
-          style="background: #11f500; color: black"
           to="/login"
         />
       </div>
