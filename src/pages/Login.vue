@@ -49,7 +49,7 @@
               />
           </div>
 
-          <div class="row q-col-gutter-md">
+          <div class="row q-gutter-x-md">
             <div class="col">
               <q-btn
                 push

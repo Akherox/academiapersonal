@@ -37,9 +37,10 @@
     </q-header>
 
     <div class="q-pa-md" style="max-width: 500px">
-      <!-- <q-input v-model="search" filled type="search" hint="Pesquisar exercicio">
+      <!-- <q-input v-model="text" filled type="search" hint="Pesquisar exercicio">
         <template v-slot:append>
-          <q-icon name="search" />
+          <q-icon v-if="text === ''" name="search" />
+          <q-icon v-else name="clear" class="cursor-pointer" @click="text = ''" />
         </template>
       </q-input> -->
     </div>
@@ -80,6 +81,7 @@ export default {
     return {
       mobileData: ref(true),
       bluetooth: ref(false),
+      text: ref(''),
     };
   },
   data() {
