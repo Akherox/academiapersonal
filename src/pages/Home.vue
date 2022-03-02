@@ -1,24 +1,7 @@
 <template>
   <q-page padding>
-    <q-header>
-      <q-toolbar style="color: black">
-        <q-btn flat round dense icon="arrow_back_ios_new" to="/home" />
-        <q-toolbar-title class="text-center">Exercicios do Dia</q-toolbar-title>
-        <q-btn flat round dense icon="fas fa-user-circle">
-          <q-menu transition-show="flip-right" transition-hide="flip-left">
-            <q-list style="min-width: 100px">
-              <q-item clickable to="/perfil">
-                <q-item-section>Meu Perfil</q-item-section>
-              </q-item>
-              <q-separator />
-              <q-item clickable to="/">
-                <q-item-section>Sair</q-item-section>
-              </q-item>
-            </q-list>
-          </q-menu>
-        </q-btn>
-      </q-toolbar>
-    </q-header>
+    <a-header>
+    </a-header>
 
     <div class="q-pa-md">
       <q-carousel
@@ -262,6 +245,8 @@
 <script>
 import { ref } from "vue";
 import AMenu from "components/AMenu";
+import AHeader from "components/AHeader"
+
 const options = ref({
   chart: {
     foreColor: "#fff",
@@ -286,6 +271,7 @@ export default {
   name: "Page Index",
   components: {
     AMenu,
+    AHeader,
   },
   setup() {
     return {

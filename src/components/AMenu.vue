@@ -1,9 +1,9 @@
 <template>
   <q-tabs align="justify" style="color: black">
-        <q-route-tab icon="fact_check" label="Lista" to="/exercicios" />
         <q-route-tab icon="home" label="Home" to="/" />
         <q-route-tab icon="fitness_center" label="Serie" to="/exercicios/serie" />
-        <q-route-tab icon="list" label="Menu" to="/menu" />
+        <q-route-tab icon="fact_check" label="Lista" to="/exercicios" />
+        <q-route-tab icon="fas fa-user-circle" label="Usuario" to="/perfil" />
       </q-tabs>
 </template>
 

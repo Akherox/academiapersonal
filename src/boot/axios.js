@@ -4,6 +4,7 @@ import { boot } from 'quasar/wrappers'
 import axios from 'axios'
 
 const api = axios.create({ baseURL: 'http://localhost:3000' })
+// const api = axios.create({ baseURL: 'http://10.152.50.128:3000' })
 
 api.interceptors.response.use(
   function(response) {

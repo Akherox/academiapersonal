@@ -11,7 +11,6 @@
         <q-card-actions vertical class="justify-around q-px-md">
           <q-item-section>
             <q-item-label>{{ exercicio.tipo }}</q-item-label>
-            <q-item-label caption>{{ exercicio.categoria }}</q-item-label>
           </q-item-section>
         </q-card-actions>
         <q-item-section class="absolute-top-right">

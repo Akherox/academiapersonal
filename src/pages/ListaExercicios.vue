@@ -17,7 +17,7 @@
     </div>
 
     <div class="row q-gutter-md">
-      <!-- <exercicio-card :exercicio="item.exercicio" v-for="item in itens" :key="item.exercicio.id" v-model:selecionado="item.selecionado" /> -->
+      <exercicio-card :exercicio="item.exercicio.$store" v-for="item in itens" :key="item.exercicio.id" v-model:selecionado="item.selecionado" />
     </div>
 
     <div class="q-pa-md" style="max-width: 500px">
