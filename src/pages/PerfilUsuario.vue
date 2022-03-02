@@ -2,7 +2,6 @@
   <q-page padding>
     <q-header>
       <q-toolbar style="color: black">
-        <q-btn flat round dense icon="arrow_back_ios_new" to="/menu" />
         <q-toolbar-title></q-toolbar-title>
         <q-btn flat round dense icon="settings">
           <q-menu>
@@ -139,70 +138,10 @@
       </div>
     </q-form>
 
-    <!-- <q-item>
-      <q-item-section>
-        <q-item-label>NOME</q-item-label>
-        <q-item-label caption lines="2">Willian Roberto Guimarães</q-item-label>
-      </q-item-section>
-      <q-separator spaced inset />
-      <q-item-section>
-        <q-item-label>SOBRENOME</q-item-label>
-        <q-item-label caption lines="2">Guimarães</q-item-label>
-      </q-item-section>
-    </q-item>
-    <q-separator spaced inset />
-    <q-item>
-      <q-item-section>
-        <q-item-label>APELIDO</q-item-label>
-        <q-item-label caption lines="2">Lico</q-item-label>
-      </q-item-section>
-      <q-separator spaced inset />
-      <q-item-section>
-        <q-item-label>DATA DE NASCIMENTO</q-item-label>
-        <q-input
-          class="col"
-          dark
-          v-model="date"
-          filled
-          type="date"
-          stack-label
-        />
-      </q-item-section>
-    </q-item>
-    <q-separator spaced inset />
-    <q-item>
-      <q-item-section>
-        <q-item-label>SEXO</q-item-label>
-        <q-item-label caption lines="2">Masculino</q-item-label>
-      </q-item-section>
-      <q-separator spaced inset />
-      <q-item-section>
-        <q-avatar rounded size="40px">
-          <img
-            src="https://www.treinus.com.br/blog/wp-content/uploads/2020/05/tipos-de-exercicios-f%C3%ADsicos.jpg"
-          />
-        </q-avatar>
-        <q-item-label>OBJETIVO</q-item-label>
-        <q-item-label caption lines="2">Hipertofia Muscular/Cardio</q-item-label>
-      </q-item-section>
-    </q-item>
-    <q-separator spaced inset />
-    <q-item-section>
-      <q-input
-        class="col"
-        dark
-        v-model="time"
-        filled
-        type="time"
-        label="Tempo disponivel"
-        stack-label
-      />
-    </q-item-section>
-    <q-separator spaced inset /> -->
-
     <q-footer>
       <a-menu />
     </q-footer>
+    
   </q-page>
 </template>
 

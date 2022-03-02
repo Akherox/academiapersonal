@@ -32,7 +32,7 @@
           <q-checkbox v-model="right" label="Manter-me logado" style="color:white"/>
         </div>
           <div class="row">
-          <a-btn push class="col-12" label="Confirmar" style="background: #11F500; color: black"/>
+          <a-btn label="Confirmar" to="/cadastro/sucesso" />
     </div>
   </q-form>
   </q-page>

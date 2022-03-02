@@ -53,10 +53,8 @@
         type="textarea"
       />
       <div class="row">
-        <a-btn push
-          class="col-12 glossy"
+        <a-btn
           label="Prosseguir"
-          style="background: #11f500; color: black"
           to="/"
         />
       </div>

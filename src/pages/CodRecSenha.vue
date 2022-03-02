@@ -17,18 +17,15 @@
         to="/senha/nova"
       ></q-btn>
 
-      <div class="q-gutter-sm" style="font-size: 3rem; color: #11f500">
+      <div class="q-gutter-sm" style="color: #11f500">
         <h5>Esqueci minha senha</h5>
       </div>
     </div>
-    <div class="q-pa-sm q-gutter-md text-center">
+    <div class="text-center">
       <h6>Insira seu código enviado para</h6>
-    </div>
-    <div
-      class="q-pa-md q-gutter-md text-center"
-      style="font-size: 0.9rem; color: #11f500"
-    >
-      <h6>exemplonatela@gmail.com</h6>
+      <div style="font-size: 0.9rem; color: #11f500">
+        <h6>exemplonatela@gmail.com</h6>
+      </div>
     </div>
 
     <q-form class="q-pa-sm q-gutter-md">
@@ -49,29 +46,24 @@
         style="font-size: 5rem; color: #11f500"
       />
       <div class="row">
-        <a-btn push
-          class="col-12 glossy"
-          label="Continuar"
-          style="background: #11f500; color: black"
-          to="/senha/nova"
-        />
+        <a-btn label="Continuar" to="/senha/nova" />
       </div>
     </q-form>
     <div
       class="q-pa-md q-gutter-md text-center"
       style="font-size: 0.9rem; color: #11f500"
     >
-      <h6>Eu não recebí um código</h6>
+      <h7>Eu não recebí um código</h7>
     </div>
   </q-page>
 </template>
 
 <script>
-import ABtn from "components/ABtn"
+import ABtn from "components/ABtn";
 
 export default {
   // name: 'PageName',
-  components:{
+  components: {
     ABtn,
   },
 };

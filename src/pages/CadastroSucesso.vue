@@ -15,10 +15,8 @@
     </div>
     <div class="q-pa-md">
       <div class="row">
-        <a-btn push
-          class="col-12 glossy"
+        <a-btn
           label="Criar Perfil"
-          style="background: #11f500; color: black"
           to="/cadastro/perfil"
         />
       </div>
