@@ -6,8 +6,12 @@ export function someAction (context) {
 import { api } from '../../boot/axios';
 
 
-export function listar({commit}) {
-    return api.get("/exercicios/").then(r => {
+export function listar({commit}, options={}) {
+    let params = '';
+    if (options.s) {
+        params = `s=${options.s}`;
+    }
+    return api.get(`/exercicios?${params}`).then(r => {
         commit("setExercicios", r.data);
     });
 }

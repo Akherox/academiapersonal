@@ -24,8 +24,8 @@ export default {
 };
 </script>
 <style scoped>
-.fundo {
-  background: url(~assets/AP-Principal.png) top center no-repeat;
+/* .fundo {
+  background: url(~assets/AP-Principal.png) center center no-repeat fixed;
   background-size: cover;
-}
+} */
 </style>

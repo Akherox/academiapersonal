@@ -7,6 +7,10 @@ export function setTreinos(state, treinos) {
   state.treinos = treinos;
 }
 
+export function setDia(state, dia) {
+  state.dia = dia;
+}
+
 export function setTreino(state, treino) {
   state.treino = treino;
 }

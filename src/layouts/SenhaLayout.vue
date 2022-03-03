@@ -20,7 +20,7 @@ export default {
 </script>
 <style scoped>
 .fondo {
-  background: url(~assets/Fondo-Mulher.png) top center no-repeat;
+  background: url(~assets/Fondo-Mulher.png) center center no-repeat fixed;
   background-size: cover;
 }
 </style>

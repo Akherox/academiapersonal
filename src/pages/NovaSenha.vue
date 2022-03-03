@@ -12,12 +12,12 @@
         </div>
       </div>
       
-      <div class="q-gutter-sm m" style="font-size: 3rem; color: #11f500">
-        <h5>Esqueci minha senha</h5>
+      <div class="q-pa-xl text-center" style="font-size: 2rem; color: #11f500">
+        NOVA SENHA
       </div>
     </div>
-    <div class="q-pa-md q-gutter-md">
-      <h6>Defina sua nova senha.</h6>
+    <div class="text-center" style="font-size: 1.3rem">
+      Defina sua nova senha
     </div>
     <q-form class="q-pa-md q-gutter-md">
       <q-input filled v-model="text" label="Senha" />

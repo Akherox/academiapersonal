@@ -11,39 +11,38 @@
           />
         </div>
       </div>
-      <q-btn
+      <!-- <q-btn
         icon="far fa-arrow-alt-circle-left"
         style="font-size: 1.5rem; color: #11f500"
-        to="/senha/nova"
-      ></q-btn>
-
-      <div class="q-gutter-sm" style="color: #11f500">
-        <h5>Esqueci minha senha</h5>
+        to="/senha/nova">
+        </q-btn> -->
+      <div class="q-pa-xl text-center" style="font-size: 1.8rem; color: #11f500">
+        ESQUECI MINHA SENHA
       </div>
     </div>
-    <div class="text-center">
-      <h6>Insira seu código enviado para</h6>
-      <div style="font-size: 0.9rem; color: #11f500">
-        <h6>exemplonatela@gmail.com</h6>
+    <div class="text-center" style="font-size: 1.3rem">
+      Insira seu código enviado para
+      <div style="font-size: 1.3rem; color: #11f500">
+        exemplonatela@gmail.com
       </div>
     </div>
 
-    <q-form class="q-pa-sm q-gutter-md">
+    <q-form class="q-pa-sm q-gutter-sm">
       <q-icon
         name="check_box_outline_blank"
-        style="font-size: 5rem; color: #11f500"
+        style="font-size: 4.5rem; color: #11f500"
       />
       <q-icon
         name="check_box_outline_blank"
-        style="font-size: 5rem; color: #11f500"
+        style="font-size: 4.5rem; color: #11f500"
       />
       <q-icon
         name="check_box_outline_blank"
-        style="font-size: 5rem; color: #11f500"
+        style="font-size: 4.5rem; color: #11f500"
       />
       <q-icon
         name="check_box_outline_blank"
-        style="font-size: 5rem; color: #11f500"
+        style="font-size: 4.5rem; color: #11f500"
       />
       <div class="row">
         <a-btn label="Continuar" to="/senha/nova" />
@@ -51,9 +50,8 @@
     </q-form>
     <div
       class="q-pa-md q-gutter-md text-center"
-      style="font-size: 0.9rem; color: #11f500"
-    >
-      <h7>Eu não recebí um código</h7>
+      style="font-size: 1rem; color: #11f500">
+      Eu não recebí um código
     </div>
   </q-page>
 </template>

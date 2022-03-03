@@ -15,6 +15,11 @@ export function listar({commit}) {
         commit("setTreinos", r.data);
     });
 }
+export function dia({commit}) {
+    return api.get("/treinos/dia").then(r => {
+        commit("setDia", r.data);
+    });
+}
 
 /**
  * Consulta a categoria do id
@@ -38,11 +43,5 @@ export function alterar({commit,dispatch}, form) {
     return api.patch(`/treinos/${form.id}/`, form).then(r => {
         commit('setTreino', r.data);
         return dispatch('listar');
-    })
-}
-
-export function listarCategorias({commit}) {
-    return api.get('/categorias/').then(r => {
-        commit('setCategorias', r.data);
     })
 }

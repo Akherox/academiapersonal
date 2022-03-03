@@ -8,8 +8,8 @@
             <div class="row no-wrap q-pa-md">
               <div class="column">
                 <div class="text-h6 q-mb-md">Configurações</div>
-                <!-- <q-toggle v-model="mobileData" label="Use Mobile Data" />
-                <q-toggle v-model="bluetooth" label="Bluetooth" /> -->
+                <q-toggle v-model="mobileData" label="Use Mobile Data" />
+                <q-toggle v-model="bluetooth" label="Bluetooth" />
               </div>
 
               <q-separator vertical inset class="q-mx-lg" />
@@ -21,14 +21,7 @@
 
                 <div class="text-subtitle1 q-mt-md q-mb-xs">Usuario</div>
 
-                <q-btn
-                  color="primary"
-                  label="Logout"
-                  push
-                  size="sm"
-                  v-close-popup
-                  to="/login"
-                />
+                <a-btn-sair />
               </div>
             </div>
           </q-menu>
@@ -36,24 +29,38 @@
       </q-toolbar>
     </q-header>
 
+    <h3></h3>
+    <div class="flex justify-center">
+      <q-img class="q-mb-xl" style="max-width: 180px" src="~/assets/Logo.png" />
+    </div>
     <div class="q-pa-md" style="max-width: 500px">
-      <!-- <q-input v-model="text" filled type="search" hint="Pesquisar exercicio">
+      <q-input v-model="search" filled type="search" hint="Pesquisar exercicio">
         <template v-slot:append>
-          <q-icon v-if="text === ''" name="search" />
-          <q-icon v-else name="clear" class="cursor-pointer" @click="text = ''" />
+          <q-icon v-if="search === ''" name="search" />
+          <q-icon
+            v-else
+            name="clear"
+            class="cursor-pointer"
+            @click="search = ''"
+          />
         </template>
-      </q-input> -->
+      </q-input>
     </div>
 
     <div class="row q-gutter-md">
-      <exercicio-card :exercicio="item.exercicio.$store" v-for="item in itens" :key="item.exercicio.id" v-model:selecionado="item.selecionado" />
+      <exercicio-card
+        :exercicio="item.exercicio"
+        v-for="item in itens"
+        :key="item.exercicio.id"
+        v-model:selecionado="item.selecionado"
+      />
     </div>
 
-    <div class="q-pa-md" style="max-width: 500px">
+    <!-- <div class="q-pa-md" style="max-width: 500px">
       <div class="q-gutter-y-md">
         <a-btn push label="Adicionar Exercicios" class="glossy" />
       </div>
-    </div>
+    </div> -->
     <q-footer>
       <a-menu />
     </q-footer>
@@ -61,32 +68,24 @@
 </template>
 
 <script>
-import { ref } from "vue";
-import ABtn from "components/ABtn";
+// import ABtn from "components/ABtn";
 import AMenu from "components/AMenu";
-import { useQuasar } from "quasar";
 import ExercicioCard from "components/ExercicioCard";
+import ABtnSair from "src/components/ABtnSair.vue";
 
 export default {
   name: "Page Index",
   components: {
-    ABtn,
+    // ABtn,
     AMenu,
-    // ExercicioCard,
-  },
-  setup() {
-    const accept = ref(false);
-    const $q = useQuasar();
-
-    return {
-      mobileData: ref(true),
-      bluetooth: ref(false),
-      text: ref(''),
-    };
+    ExercicioCard,
+    ABtnSair,
   },
   data() {
     return {
       search: "",
+      mobileData: "true",
+      bluetooth: "false",
     };
   },
   computed: {
@@ -99,6 +98,12 @@ export default {
       });
     },
   },
+  watch: {
+    search() {
+      this.$store.dispatch("exercicio/listar", { s: this.search });
+    },
+  },
+
   mounted() {
     this.$store.dispatch("exercicio/listar");
   },

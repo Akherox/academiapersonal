@@ -55,7 +55,7 @@
       <div class="row">
         <a-btn
           label="Prosseguir"
-          to="/"
+          to="/login"
         />
       </div>
     </q-form>

@@ -5,21 +5,21 @@
       style="background: radial-gradient(circle, #1d1d1d 30%, #1b5e20 100%)"
     >
       <q-card-section horizontal class="q-pt-xs">
-        <q-card-section class="col-6">
+        <q-card-section class="col">
           <q-video :src="exercicio.video" />
+          <h3 style="font-size: 2rem">{{ exercicio.nome }}</h3>
+           <q-item-label>{{ exercicio.descricao }}</q-item-label>
         </q-card-section>
-        <q-card-actions vertical class="justify-around q-px-md">
-          <q-item-section>
-            <q-item-label>{{ exercicio.tipo }}</q-item-label>
-          </q-item-section>
-        </q-card-actions>
-        <q-item-section class="absolute-top-right">
+        <!-- <q-card-actions vertical class="justify-around q-px-md">
+         <q-item-section class="absolute-top-right">
           <q-checkbox
             size="lg"
             :modelValue="selecionado"
             @update:modelValue="$emit('update:selecionado', $event)"
           />
-        </q-item-section>
+        </q-item-section> 
+        </q-card-actions> -->
+        
       </q-card-section>
     </q-card-section>
   </q-card>
@@ -27,10 +27,8 @@
 
 <script>
 export default {
-  props: {
-    exercicio: Object,
-    selecionado: Boolean,
-  },
+  props: ["exercicio", "selecionado"],
+
   emits: ["update:selecionado"],
 };
 </script>

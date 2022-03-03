@@ -36,104 +36,49 @@
       </q-toolbar>
     </q-header>
 
-    <h3 class="text-center" style="color: #11f500">Perfil</h3>
-    <q-item>
-      <q-item-section class="flex-center">
+    <h3></h3>
+    <div class="flex justify-center">
+      <q-img class="q-mb-xl" style="max-width: 180px" src="~/assets/Logo.png" />
+    </div>
+    <q-list dark separator>
+      <q-item>
+        <q-item-section class="q-mb-xl flex-center">
         <q-avatar rounded size="100px">
           <img src="https://cdn.quasar.dev/img/avatar4.jpg" />
         </q-avatar>
       </q-item-section>
-    </q-item>
-    <q-form
-      @submit="onSubmit"
-      @reset="onReset"
-      class="q-pa-md q-gutter-md cursor-pointer"
-    >
-      <q-item>
+      </q-item>
+        <q-item>
         <q-item-section>
-          <q-input
-            v-model="name"
-            label="Seu nome"
-            hint="Digite seu nome"
-            lazy-rules
-            :rules="[(val) => (val && val.length > 0) || 'Campo obrigatorio']"
-          />
+          <q-item-label>{{ usuario.nome }}</q-item-label>
+          <q-item-label caption>Nome</q-item-label>
         </q-item-section>
       </q-item>
-      <q-separator spaced inset />
-
       <q-item>
         <q-item-section>
-          <q-input
-            v-model="Sobrenome"
-            label="Seu sobrenome"
-            hint="Digite seu Sobrenome"
-            lazy-rules
-            :rules="[(val) => (val && val.length > 0) || 'Campo obrigatorio']"
-          />
+          <q-item-label>{{ usuario.sobrenome }}</q-item-label>
+          <q-item-label caption>Sobrenome</q-item-label>
         </q-item-section>
       </q-item>
-      <q-separator spaced inset />
-
       <q-item>
         <q-item-section>
-          <q-input
-            class="col"
-            label="Data de nascimento*"
-            dark
-            v-model="date"
-            type="date"
-            stack-label
-            hint="Data de nascimento"
-            lazy-rules
-            :rules="[(val) => (val && val.length > 0) || 'Campo obrigatorio']"
-          />
+          <q-item-label>{{ usuario.data }}</q-item-label>
+          <q-item-label caption>Nascimento</q-item-label>
         </q-item-section>
       </q-item>
-      <q-separator spaced inset />
-
       <q-item>
         <q-item-section>
-          <q-input
-            v-model="sexo"
-            label="Seu sexo"
-            hint="Digite sexo masculino ou feminino"
-            lazy-rules
-            :rules="[(val) => (val && val.length > 0) || 'Campo obrigatorio']"
-          />
+          <q-item-label>{{ usuario.genero }}</q-item-label>
+          <q-item-label caption>genero</q-item-label>
         </q-item-section>
       </q-item>
-      <q-separator spaced inset />
-
       <q-item>
         <q-item-section>
-          <q-input
-            color="primary"
-            v-model="objetivo"
-            label="Seu Objetivo"
-            hint="Digite seu Objetivo Ex: Hipertrofia muscular"
-            lazy-rules
-            :rules="[(val) => (val && val.length > 0) || 'Campo obrigatorio']"
-          />
+          <q-item-label>{{ usuario.objetivo }}</q-item-label>
+          <q-item-label caption>Objetivo </q-item-label>
         </q-item-section>
       </q-item>
-
-      <q-toggle v-model="accept" label="Eu aceito os termos" />
-      
-      <div class="row q-gutter-x-md ">
-        <div class="col">
-          <a-btn class="justify-center" label="Submit" type="submit" />
-        </div>
-        <div class="col">
-          <q-btn 
-            push
-            label="Reset"
-            type="reset"
-            class="full-width glossy justify-center"
-          />
-        </div>
-      </div>
-    </q-form>
+    </q-list>
 
     <q-footer>
       <a-menu />
@@ -145,62 +90,17 @@
 import { ref } from "vue";
 import AMenu from "components/AMenu";
 import { useQuasar } from "quasar";
-import ABtn from "components/ABtn";
+
 
 export default {
   components: {
     AMenu,
-    ABtn,
+    
   },
-  setup() {
-    const name = ref(null);
-    const date = ref(null);
-    const Sobrenome = ref(null);
-    const sexo = ref(null);
-    const objetivo = ref(null);
-
-    const accept = ref(false);
-    const $q = useQuasar();
-
-    return {
-      mobileData: ref(true),
-      bluetooth: ref(false),
-
-      model1: ref(null),
-      time: ref(""),
-      name,
-      accept,
-      date,
-      Sobrenome,
-      sexo,
-      objetivo,
-
-      onSubmit() {
-        if (accept.value !== true) {
-          $q.notify({
-            color: "red-5",
-            textColor: "white",
-            icon: "warning",
-            message: "You need to accept the license and terms first",
-          });
-        } else {
-          $q.notify({
-            color: "green-4",
-            textColor: "white",
-            icon: "cloud_done",
-            message: "Submitted",
-          });
-        }
-      },
-      onReset() {
-        name.value = null;
-        date.value = null;
-        Sobrenome.value = null;
-        sexo.value = null;
-        objetivo.value = null;
-        accept.value = false;
-      },
-    };
+  computed: {
+    usuario() {
+      return this.$store.state.usuario.usuario;
+    },
   },
 };
 </script>

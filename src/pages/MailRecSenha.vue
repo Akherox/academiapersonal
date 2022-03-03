@@ -12,11 +12,11 @@
         </div>
       </div>
       
-      <div class="q-gutter-sm" style="font-size: 3rem; color: #11f500">
-        <h5>Esqueci minha senha</h5>
+      <div class="q-pa-lx text-center" style="font-size: 2rem; color: #11f500">
+        ESQUECI A SENHA
       </div>
     </div>
-    <div class="q-pa-md q-gutter-md">
+    <div class="text-center">
       <h6>Enviaremos um PIN para seu e-mail, troque sua senha.</h6>
     </div>
     <q-form class="q-pa-md q-gutter-md">

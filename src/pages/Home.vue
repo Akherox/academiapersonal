@@ -2,7 +2,6 @@
   <q-page padding>
     <q-header>
       <q-toolbar style="color: black">
-        <q-btn flat round dense icon="arrow_back_ios_new" to="/login" />
         <q-toolbar-title></q-toolbar-title>
         <q-btn flat round dense icon="settings">
           <q-menu>
@@ -22,14 +21,7 @@
 
                 <div class="text-subtitle1 q-mt-md q-mb-xs">Usuario</div>
 
-                <q-btn
-                  color="primary"
-                  label="Logout"
-                  push
-                  size="sm"
-                  v-close-popup
-                  to="/login"
-                />
+                <a-btn-sair />
               </div>
             </div>
           </q-menu>
@@ -37,6 +29,10 @@
       </q-toolbar>
     </q-header>
 
+    <h3></h3>
+    <div class="flex justify-center">
+      <q-img class="q-mb-xl" style="max-width: 180px" src="~/assets/Logo.png" />
+    </div>
     <div class="q-pa-md">
       <q-carousel
         height="160px"
@@ -279,6 +275,7 @@
 <script>
 import { ref } from "vue";
 import AMenu from "components/AMenu";
+import ABtnSair from 'src/components/ABtnSair.vue';
 
 const options = ref({
   chart: {
@@ -304,7 +301,9 @@ export default {
   name: "Page Index",
   components: {
     AMenu,
+    ABtnSair,
   },
+
   setup() {
     return {
       mobileData: ref(true),

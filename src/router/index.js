@@ -29,13 +29,15 @@ export default route(function ({ store, ssrContext }) {
 
 
   Router.beforeEach((to, from, next) => {
-    console.log('Router.beforeEach');
+    console.log('Router.beforeEach', !store.getters['usuario/isLogado'], to.matched.some(route => route.meta.requiresAuth));
 
     if (to.matched.some(route => route.meta.requiresAuth) && !store.getters['usuario/isLogado']) {
 
       store.dispatch('usuario/carregarToken').then(r => {
+        console.log (r)
         next();
       }).catch(error => {
+        console.log (error)
         Notify.create({
           type: "negative",
           message: "É necessário efetuar o login"

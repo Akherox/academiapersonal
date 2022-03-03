@@ -35,78 +35,51 @@
         </q-btn>
       </q-toolbar>
     </q-header>
-   <!-- <q-btn color="green" label="⇦" to="/" class="q-my-sm" />-->
-    <h3>Serie</h3>
 
-    <div class="q-pa-md" style="max-width: 400px">
-    <q-list bordered separator>
-      <q-item clickable v-ripple>
-        <q-item-section top avatar>
-          <div class="q-pa-sm">
-    <div class="q-gutter-sm">
-      <q-checkbox v-model="curlcombarra" color="green" />
+    <h3></h3>
+    <div class="flex justify-center">
+      <q-img class="q-mb-xl" style="max-width: 180px" src="~/assets/Logo.png" />
     </div>
-  </div>
-        <!--  <q-avatar color="primary" text-color="white" square icon="check" />-->
-        </q-item-section>
-        <q-item-section>
-          <q-item-label >Curl com barra</q-item-label>
-          <q-item-label overline>3 x 15-20 (35 carga)</q-item-label>
-        </q-item-section>
-      </q-item>
 
-      <q-item clickable v-ripple>
-        <q-item-section top avatar>
-          <div class="q-pa-sm">
-    <div class="q-gutter-sm">
-      <q-checkbox v-model="curlcombarraagarre" color="green" />
+    <div class="q-pa-md" style="max-width: 400px" v-if="treino">
+      <serie-card
+        :key="serie.id"
+        v-for="serie in treino.series"
+        :serie="serie"
+      />
     </div>
-  </div>
-         <!-- <q-avatar color="primary" text-color="white" square icon="check" />-->
-        </q-item-section>
-        <q-item-section>
-          <q-item-label >Curl com barra agarre afastado</q-item-label>
-          <q-item-label overline>3 x 15-20 (35 carga)</q-item-label>
-        </q-item-section>
-      </q-item>
+    <div v-else>Nenhum treino encontrado</div>
 
-      <q-item clickable v-ripple>
-        <q-item-section top avatar>
-          <div class="q-pa-sm">
-    <div class="q-gutter-sm">
-      <q-checkbox v-model="curlcombarraez" color="green" />
-    </div>
-  </div>
-          <!--<q-avatar color="primary" text-color="white" square icon="check" />-->
-        </q-item-section>
-        <q-item-section>
-          <q-item-label >Curl com barra ez</q-item-label>
-          <q-item-label overline>3 x 15-20 (35 carga)</q-item-label>
-        </q-item-section>
-      </q-item>
-    </q-list>
-  </div>
-
-    <q-footer >
-        <a-menu/>
+    <q-footer>
+      <a-menu />
     </q-footer>
   </q-page>
 </template>
 
 <script>
-import { ref } from 'vue';
-import AMenu from 'components/AMenu';
+import AMenu from "components/AMenu";
+import SerieCard from "components/SerieCard";
+
 export default {
-  components: { AMenu },
+  components: {
+    AMenu,
+    SerieCard,
+  },
+
   // name: 'PageName',
-  setup(){
+  computed: {
+    treino() {
+      return this.$store.state.treino.dia;
+    },
+  },
+  data() {
     return {
-      curlcombarra: ref(true),
-      curlcombarraagarre: ref(true),
-      curlcombarraez: ref(true),
-      mobileData: ref(true),
-      bluetooth: ref(false),
-    }
-  }
+      mobileData: "true",
+      bluetooth: "false",
+    };
+  },
+  mounted() {
+    this.$store.dispatch("treino/dia");
+  },
 };
 </script>
