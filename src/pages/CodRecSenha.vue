@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <q-form class="q-pa-sm q-gutter-sm">
+    <q-form class="q-pa-sm q-gutter-sm justify-center">
       <q-icon
         name="check_box_outline_blank"
         style="font-size: 4.5rem; color: #11f500"

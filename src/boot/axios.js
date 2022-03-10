@@ -3,8 +3,8 @@
 import { boot } from 'quasar/wrappers'
 import axios from 'axios'
 
-const api = axios.create({ baseURL: 'http://localhost:3000' })
-// const api = axios.create({ baseURL: 'http://10.152.50.128:3000' })
+//const api = axios.create({ baseURL: 'http://localhost:3000' })
+ const api = axios.create({ baseURL: 'http://10.152.46.17:3000' })
 api.defaults.validateStatus = status => {
   return status >= 200 && status < 300;
 };

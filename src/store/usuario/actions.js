@@ -18,6 +18,16 @@ export function logar({ commit, dispatch }, { email, senha }) {
     });
   }
 
+  export function inserir({commit, dispatch}, form) {
+    return api.post('/usuarios/', form).then(r => {
+        commit('setUsuario', r.data.usuario);
+        commit("setToken", r.data.token);
+        storage.setItem("token", r.data.token);
+        return dispatch('me');
+    })
+  
+  }
+
   export function me({ commit }) {
     return api.get("/usuarios/eu").then(r => {
       commit("setUsuario", r.data);
