@@ -22,32 +22,29 @@
       <q-select
         class="col"
         dark
-        v-model="form.model1"
-        :options="form.options1"
+        v-model="form.generoModel"
+        :options="form.genero"
         label="Genero"
       />
-      <q-input class="col" dark v-model="form.peso" label="Peso" />
-      <q-input class="col" dark v-model="form.objetivo" label="Objetivo" />
+      <q-input class="col" dark v-model="form.apelido" label="Apelido" />
       <q-select
         class="col"
         dark
-        v-model="form.model2"
-        :options="form.options2"
-        label="Nivel"
+        v-model="form.objetivoModel"
+        :options="form.objetivo"
+        label="Objetivo"
       />
-      <!-- <q-input
+      <q-select
         class="col"
         dark
-        v-model="time"
-        filled
-        type="time"
-        label="Tempo disponivel"
-        stack-label
-      /> -->
+        v-model="form.nivelModel"
+        :options="form.nivel"
+        label="Nivel"
+      />
       <q-input
         class="col"
         dark
-        v-model="form.text"
+        v-model="form.frase"
         label="Frase inspiradora e motivacional"
         filled
         type="textarea"
@@ -56,6 +53,13 @@
         class="col"
         dark
         v-model="form.senha"
+        filled
+        label="Senha"
+      />
+      <q-input
+        class="col"
+        dark
+        v-model="form.confirmarsenha"
         filled
         label="Confirmar Senha"
       />
@@ -88,13 +92,15 @@ export default {
       cpf: "",
       data: "",
       senha: "",
-      text: "",
-      peso: "",
-      objetivo: "",
-      model1: (null),
-      model2: (null),
-      options1: ["Masculino", "Feminino"],
-      options2: ["Principiante", "Intermediario", "Avançado", "Hard Work"],
+      frase: "",
+      apelido: "",
+      confirmarsenha: "",
+      generoModel: (null),
+      objetivoModel: (null),
+      nivelModel: (null),
+      genero: ["Masculino", "Feminino"],
+      objetivo: ["Perder Peso", "Ganhar Musculação"],
+      nivel: ["Iniciante", "Intermediario", "Avançado"],
       }
     };
   },
@@ -127,7 +133,8 @@ export default {
       }
       else {
         this.$q.notify({
-          
+          message: "As senhas não são idênticas",
+          color: "negative",
         })
       }
     }

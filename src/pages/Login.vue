@@ -86,9 +86,9 @@ export default {
 
   data () {
     return {
-      password: '',
+      password: '', //123
        isPwd: true,
-      text: 'usuario@email.com',
+      text: '', //usuario@email.com
       dense: false,
       right: false,
     }

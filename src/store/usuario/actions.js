@@ -25,7 +25,13 @@ export function logar({ commit, dispatch }, { email, senha }) {
         storage.setItem("token", r.data.token);
         return dispatch('me');
     })
-  
+  }
+
+  export function alterar({commit,dispatch}, form) {
+    return api.put(`/usuarios/${form.id}/`, form).then(r => {
+        commit('setUsuario', r.data);
+        return dispatch('me');
+    })
   }
 
   export function me({ commit }) {

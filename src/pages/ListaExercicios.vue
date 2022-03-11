@@ -84,8 +84,8 @@ export default {
   data() {
     return {
       search: "",
-      mobileData: "true",
-      bluetooth: "false",
+      mobileData: (true),
+      bluetooth: (false),
     };
   },
   computed: {
